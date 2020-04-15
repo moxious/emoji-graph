@@ -26,11 +26,14 @@ musical_instrument,music
 man,person
 woman,person
 person_activity,person
+person_activity,activity
 person_fantasy,person
 person_gesture,person
 person_role,person
 person_sport,person
+person_sport,activity
 person_sport,sport
+sport,activity
 place_building,place
 place_geographic,place
 place_map,place
