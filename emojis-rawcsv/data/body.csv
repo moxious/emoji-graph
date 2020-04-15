@@ -1,0 +1,200 @@
+column_a,code,browser,cldr_short_name
+1232,U+1F933,🤳,selfie
+1233,U+1F933 U+1F3FB,🤳🏻,selfie: light skin tone
+1234,U+1F933 U+1F3FC,🤳🏼,selfie: medium-light skin tone
+1235,U+1F933 U+1F3FD,🤳🏽,selfie: medium skin tone
+1236,U+1F933 U+1F3FE,🤳🏾,selfie: medium-dark skin tone
+1237,U+1F933 U+1F3FF,🤳🏿,selfie: dark skin tone
+1238,U+1F4AA,💪,flexed biceps
+1239,U+1F4AA U+1F3FB,💪🏻,flexed biceps: light skin tone
+1240,U+1F4AA U+1F3FC,💪🏼,flexed biceps: medium-light skin tone
+1241,U+1F4AA U+1F3FD,💪🏽,flexed biceps: medium skin tone
+1242,U+1F4AA U+1F3FE,💪🏾,flexed biceps: medium-dark skin tone
+1243,U+1F4AA U+1F3FF,💪🏿,flexed biceps: dark skin tone
+1244,U+1F448,👈,backhand index pointing left
+1245,U+1F448 U+1F3FB,👈🏻,backhand index pointing left: light skin tone
+1246,U+1F448 U+1F3FC,👈🏼,backhand index pointing left: medium-light skin tone
+1247,U+1F448 U+1F3FD,👈🏽,backhand index pointing left: medium skin tone
+1248,U+1F448 U+1F3FE,👈🏾,backhand index pointing left: medium-dark skin tone
+1249,U+1F448 U+1F3FF,👈🏿,backhand index pointing left: dark skin tone
+1250,U+1F449,👉,backhand index pointing right
+1251,U+1F449 U+1F3FB,👉🏻,backhand index pointing right: light skin tone
+1252,U+1F449 U+1F3FC,👉🏼,backhand index pointing right: medium-light skin tone
+1253,U+1F449 U+1F3FD,👉🏽,backhand index pointing right: medium skin tone
+1254,U+1F449 U+1F3FE,👉🏾,backhand index pointing right: medium-dark skin tone
+1255,U+1F449 U+1F3FF,👉🏿,backhand index pointing right: dark skin tone
+1256,U+261D,☝,index pointing up
+1257,U+261D U+1F3FB,☝🏻,index pointing up: light skin tone
+1258,U+261D U+1F3FC,☝🏼,index pointing up: medium-light skin tone
+1259,U+261D U+1F3FD,☝🏽,index pointing up: medium skin tone
+1260,U+261D U+1F3FE,☝🏾,index pointing up: medium-dark skin tone
+1261,U+261D U+1F3FF,☝🏿,index pointing up: dark skin tone
+1262,U+1F446,👆,backhand index pointing up
+1263,U+1F446 U+1F3FB,👆🏻,backhand index pointing up: light skin tone
+1264,U+1F446 U+1F3FC,👆🏼,backhand index pointing up: medium-light skin tone
+1265,U+1F446 U+1F3FD,👆🏽,backhand index pointing up: medium skin tone
+1266,U+1F446 U+1F3FE,👆🏾,backhand index pointing up: medium-dark skin tone
+1267,U+1F446 U+1F3FF,👆🏿,backhand index pointing up: dark skin tone
+1268,U+1F595,🖕,middle finger
+1269,U+1F595 U+1F3FB,🖕🏻,middle finger: light skin tone
+1270,U+1F595 U+1F3FC,🖕🏼,middle finger: medium-light skin tone
+1271,U+1F595 U+1F3FD,🖕🏽,middle finger: medium skin tone
+1272,U+1F595 U+1F3FE,🖕🏾,middle finger: medium-dark skin tone
+1273,U+1F595 U+1F3FF,🖕🏿,middle finger: dark skin tone
+1274,U+1F447,👇,backhand index pointing down
+1275,U+1F447 U+1F3FB,👇🏻,backhand index pointing down: light skin tone
+1276,U+1F447 U+1F3FC,👇🏼,backhand index pointing down: medium-light skin tone
+1277,U+1F447 U+1F3FD,👇🏽,backhand index pointing down: medium skin tone
+1278,U+1F447 U+1F3FE,👇🏾,backhand index pointing down: medium-dark skin tone
+1279,U+1F447 U+1F3FF,👇🏿,backhand index pointing down: dark skin tone
+1280,U+270C,✌,victory hand
+1281,U+270C U+1F3FB,✌🏻,victory hand: light skin tone
+1282,U+270C U+1F3FC,✌🏼,victory hand: medium-light skin tone
+1283,U+270C U+1F3FD,✌🏽,victory hand: medium skin tone
+1284,U+270C U+1F3FE,✌🏾,victory hand: medium-dark skin tone
+1285,U+270C U+1F3FF,✌🏿,victory hand: dark skin tone
+1286,U+1F91E,🤞,crossed fingers
+1287,U+1F91E U+1F3FB,🤞🏻,crossed fingers: light skin tone
+1288,U+1F91E U+1F3FC,🤞🏼,crossed fingers: medium-light skin tone
+1289,U+1F91E U+1F3FD,🤞🏽,crossed fingers: medium skin tone
+1290,U+1F91E U+1F3FE,🤞🏾,crossed fingers: medium-dark skin tone
+1291,U+1F91E U+1F3FF,🤞🏿,crossed fingers: dark skin tone
+1292,U+1F596,🖖,vulcan salute
+1293,U+1F596 U+1F3FB,🖖🏻,vulcan salute: light skin tone
+1294,U+1F596 U+1F3FC,🖖🏼,vulcan salute: medium-light skin tone
+1295,U+1F596 U+1F3FD,🖖🏽,vulcan salute: medium skin tone
+1296,U+1F596 U+1F3FE,🖖🏾,vulcan salute: medium-dark skin tone
+1297,U+1F596 U+1F3FF,🖖🏿,vulcan salute: dark skin tone
+1298,U+1F918,🤘,sign of the horns
+1299,U+1F918 U+1F3FB,🤘🏻,sign of the horns: light skin tone
+1300,U+1F918 U+1F3FC,🤘🏼,sign of the horns: medium-light skin tone
+1301,U+1F918 U+1F3FD,🤘🏽,sign of the horns: medium skin tone
+1302,U+1F918 U+1F3FE,🤘🏾,sign of the horns: medium-dark skin tone
+1303,U+1F918 U+1F3FF,🤘🏿,sign of the horns: dark skin tone
+1304,U+1F919,🤙,call me hand
+1305,U+1F919 U+1F3FB,🤙🏻,call me hand: light skin tone
+1306,U+1F919 U+1F3FC,🤙🏼,call me hand: medium-light skin tone
+1307,U+1F919 U+1F3FD,🤙🏽,call me hand: medium skin tone
+1308,U+1F919 U+1F3FE,🤙🏾,call me hand: medium-dark skin tone
+1309,U+1F919 U+1F3FF,🤙🏿,call me hand: dark skin tone
+1310,U+1F590,🖐,hand with fingers splayed
+1311,U+1F590 U+1F3FB,🖐🏻,hand with fingers splayed: light skin tone
+1312,U+1F590 U+1F3FC,🖐🏼,hand with fingers splayed: medium-light skin tone
+1313,U+1F590 U+1F3FD,🖐🏽,hand with fingers splayed: medium skin tone
+1314,U+1F590 U+1F3FE,🖐🏾,hand with fingers splayed: medium-dark skin tone
+1315,U+1F590 U+1F3FF,🖐🏿,hand with fingers splayed: dark skin tone
+1316,U+270B,✋,raised hand
+1317,U+270B U+1F3FB,✋🏻,raised hand: light skin tone
+1318,U+270B U+1F3FC,✋🏼,raised hand: medium-light skin tone
+1319,U+270B U+1F3FD,✋🏽,raised hand: medium skin tone
+1320,U+270B U+1F3FE,✋🏾,raised hand: medium-dark skin tone
+1321,U+270B U+1F3FF,✋🏿,raised hand: dark skin tone
+1322,U+1F44C,👌,OK hand
+1323,U+1F44C U+1F3FB,👌🏻,OK hand: light skin tone
+1324,U+1F44C U+1F3FC,👌🏼,OK hand: medium-light skin tone
+1325,U+1F44C U+1F3FD,👌🏽,OK hand: medium skin tone
+1326,U+1F44C U+1F3FE,👌🏾,OK hand: medium-dark skin tone
+1327,U+1F44C U+1F3FF,👌🏿,OK hand: dark skin tone
+1328,U+1F44D,👍,thumbs up
+1329,U+1F44D U+1F3FB,👍🏻,thumbs up: light skin tone
+1330,U+1F44D U+1F3FC,👍🏼,thumbs up: medium-light skin tone
+1331,U+1F44D U+1F3FD,👍🏽,thumbs up: medium skin tone
+1332,U+1F44D U+1F3FE,👍🏾,thumbs up: medium-dark skin tone
+1333,U+1F44D U+1F3FF,👍🏿,thumbs up: dark skin tone
+1334,U+1F44E,👎,thumbs down
+1335,U+1F44E U+1F3FB,👎🏻,thumbs down: light skin tone
+1336,U+1F44E U+1F3FC,👎🏼,thumbs down: medium-light skin tone
+1337,U+1F44E U+1F3FD,👎🏽,thumbs down: medium skin tone
+1338,U+1F44E U+1F3FE,👎🏾,thumbs down: medium-dark skin tone
+1339,U+1F44E U+1F3FF,👎🏿,thumbs down: dark skin tone
+1340,U+270A,✊,raised fist
+1341,U+270A U+1F3FB,✊🏻,raised fist: light skin tone
+1342,U+270A U+1F3FC,✊🏼,raised fist: medium-light skin tone
+1343,U+270A U+1F3FD,✊🏽,raised fist: medium skin tone
+1344,U+270A U+1F3FE,✊🏾,raised fist: medium-dark skin tone
+1345,U+270A U+1F3FF,✊🏿,raised fist: dark skin tone
+1346,U+1F44A,👊,oncoming fist
+1347,U+1F44A U+1F3FB,👊🏻,oncoming fist: light skin tone
+1348,U+1F44A U+1F3FC,👊🏼,oncoming fist: medium-light skin tone
+1349,U+1F44A U+1F3FD,👊🏽,oncoming fist: medium skin tone
+1350,U+1F44A U+1F3FE,👊🏾,oncoming fist: medium-dark skin tone
+1351,U+1F44A U+1F3FF,👊🏿,oncoming fist: dark skin tone
+1352,U+1F91B,🤛,left-facing fist
+1353,U+1F91B U+1F3FB,🤛🏻,left-facing fist: light skin tone
+1354,U+1F91B U+1F3FC,🤛🏼,left-facing fist: medium-light skin tone
+1355,U+1F91B U+1F3FD,🤛🏽,left-facing fist: medium skin tone
+1356,U+1F91B U+1F3FE,🤛🏾,left-facing fist: medium-dark skin tone
+1357,U+1F91B U+1F3FF,🤛🏿,left-facing fist: dark skin tone
+1358,U+1F91C,🤜,right-facing fist
+1359,U+1F91C U+1F3FB,🤜🏻,right-facing fist: light skin tone
+1360,U+1F91C U+1F3FC,🤜🏼,right-facing fist: medium-light skin tone
+1361,U+1F91C U+1F3FD,🤜🏽,right-facing fist: medium skin tone
+1362,U+1F91C U+1F3FE,🤜🏾,right-facing fist: medium-dark skin tone
+1363,U+1F91C U+1F3FF,🤜🏿,right-facing fist: dark skin tone
+1364,U+1F91A,🤚,raised back of hand
+1365,U+1F91A U+1F3FB,🤚🏻,raised back of hand: light skin tone
+1366,U+1F91A U+1F3FC,🤚🏼,raised back of hand: medium-light skin tone
+1367,U+1F91A U+1F3FD,🤚🏽,raised back of hand: medium skin tone
+1368,U+1F91A U+1F3FE,🤚🏾,raised back of hand: medium-dark skin tone
+1369,U+1F91A U+1F3FF,🤚🏿,raised back of hand: dark skin tone
+1370,U+1F44B,👋,waving hand
+1371,U+1F44B U+1F3FB,👋🏻,waving hand: light skin tone
+1372,U+1F44B U+1F3FC,👋🏼,waving hand: medium-light skin tone
+1373,U+1F44B U+1F3FD,👋🏽,waving hand: medium skin tone
+1374,U+1F44B U+1F3FE,👋🏾,waving hand: medium-dark skin tone
+1375,U+1F44B U+1F3FF,👋🏿,waving hand: dark skin tone
+1382,U+270D,✍,writing hand
+1383,U+270D U+1F3FB,✍🏻,writing hand: light skin tone
+1384,U+270D U+1F3FC,✍🏼,writing hand: medium-light skin tone
+1385,U+270D U+1F3FD,✍🏽,writing hand: medium skin tone
+1386,U+270D U+1F3FE,✍🏾,writing hand: medium-dark skin tone
+1387,U+270D U+1F3FF,✍🏿,writing hand: dark skin tone
+1388,U+1F44F,👏,clapping hands
+1389,U+1F44F U+1F3FB,👏🏻,clapping hands: light skin tone
+1390,U+1F44F U+1F3FC,👏🏼,clapping hands: medium-light skin tone
+1391,U+1F44F U+1F3FD,👏🏽,clapping hands: medium skin tone
+1392,U+1F44F U+1F3FE,👏🏾,clapping hands: medium-dark skin tone
+1393,U+1F44F U+1F3FF,👏🏿,clapping hands: dark skin tone
+1394,U+1F450,👐,open hands
+1395,U+1F450 U+1F3FB,👐🏻,open hands: light skin tone
+1396,U+1F450 U+1F3FC,👐🏼,open hands: medium-light skin tone
+1397,U+1F450 U+1F3FD,👐🏽,open hands: medium skin tone
+1398,U+1F450 U+1F3FE,👐🏾,open hands: medium-dark skin tone
+1399,U+1F450 U+1F3FF,👐🏿,open hands: dark skin tone
+1400,U+1F64C,🙌,raising hands
+1401,U+1F64C U+1F3FB,🙌🏻,raising hands: light skin tone
+1402,U+1F64C U+1F3FC,🙌🏼,raising hands: medium-light skin tone
+1403,U+1F64C U+1F3FD,🙌🏽,raising hands: medium skin tone
+1404,U+1F64C U+1F3FE,🙌🏾,raising hands: medium-dark skin tone
+1405,U+1F64C U+1F3FF,🙌🏿,raising hands: dark skin tone
+1412,U+1F64F,🙏,folded hands
+1413,U+1F64F U+1F3FB,🙏🏻,folded hands: light skin tone
+1414,U+1F64F U+1F3FC,🙏🏼,folded hands: medium-light skin tone
+1415,U+1F64F U+1F3FD,🙏🏽,folded hands: medium skin tone
+1416,U+1F64F U+1F3FE,🙏🏾,folded hands: medium-dark skin tone
+1417,U+1F64F U+1F3FF,🙏🏿,folded hands: dark skin tone
+1418,U+1F91D,🤝,handshake
+1419,U+1F485,💅,nail polish
+1420,U+1F485 U+1F3FB,💅🏻,nail polish: light skin tone
+1421,U+1F485 U+1F3FC,💅🏼,nail polish: medium-light skin tone
+1422,U+1F485 U+1F3FD,💅🏽,nail polish: medium skin tone
+1423,U+1F485 U+1F3FE,💅🏾,nail polish: medium-dark skin tone
+1424,U+1F485 U+1F3FF,💅🏿,nail polish: dark skin tone
+1425,U+1F442,👂,ear
+1426,U+1F442 U+1F3FB,👂🏻,ear: light skin tone
+1427,U+1F442 U+1F3FC,👂🏼,ear: medium-light skin tone
+1428,U+1F442 U+1F3FD,👂🏽,ear: medium skin tone
+1429,U+1F442 U+1F3FE,👂🏾,ear: medium-dark skin tone
+1430,U+1F442 U+1F3FF,👂🏿,ear: dark skin tone
+1431,U+1F443,👃,nose
+1432,U+1F443 U+1F3FB,👃🏻,nose: light skin tone
+1433,U+1F443 U+1F3FC,👃🏼,nose: medium-light skin tone
+1434,U+1F443 U+1F3FD,👃🏽,nose: medium skin tone
+1435,U+1F443 U+1F3FE,👃🏾,nose: medium-dark skin tone
+1436,U+1F443 U+1F3FF,👃🏿,nose: dark skin tone
+1437,U+1F463,👣,footprints
+1438,U+1F440,👀,eyes
+1439,U+1F441,👁,eye
+1440,U+1F441 U+FE0F U+200D U+1F5E8 U+FE0F,👁️‍🗨️,eye in speech bubble
+1442,U+1F445,👅,tongue
+1443,U+1F444,👄,mouth

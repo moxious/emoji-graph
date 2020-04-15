@@ -1,0 +1,43 @@
+column_a,code,browser,cldr_short_name
+108,U+1F476,👶,baby
+109,U+1F476 U+1F3FB,👶🏻,baby: light skin tone
+110,U+1F476 U+1F3FC,👶🏼,baby: medium-light skin tone
+111,U+1F476 U+1F3FD,👶🏽,baby: medium skin tone
+112,U+1F476 U+1F3FE,👶🏾,baby: medium-dark skin tone
+113,U+1F476 U+1F3FF,👶🏿,baby: dark skin tone
+120,U+1F466,👦,boy
+121,U+1F466 U+1F3FB,👦🏻,boy: light skin tone
+122,U+1F466 U+1F3FC,👦🏼,boy: medium-light skin tone
+123,U+1F466 U+1F3FD,👦🏽,boy: medium skin tone
+124,U+1F466 U+1F3FE,👦🏾,boy: medium-dark skin tone
+125,U+1F466 U+1F3FF,👦🏿,boy: dark skin tone
+126,U+1F467,👧,girl
+127,U+1F467 U+1F3FB,👧🏻,girl: light skin tone
+128,U+1F467 U+1F3FC,👧🏼,girl: medium-light skin tone
+129,U+1F467 U+1F3FD,👧🏽,girl: medium skin tone
+130,U+1F467 U+1F3FE,👧🏾,girl: medium-dark skin tone
+131,U+1F467 U+1F3FF,👧🏿,girl: dark skin tone
+138,U+1F468,👨,man
+139,U+1F468 U+1F3FB,👨🏻,man: light skin tone
+140,U+1F468 U+1F3FC,👨🏼,man: medium-light skin tone
+141,U+1F468 U+1F3FD,👨🏽,man: medium skin tone
+142,U+1F468 U+1F3FE,👨🏾,man: medium-dark skin tone
+143,U+1F468 U+1F3FF,👨🏿,man: dark skin tone
+144,U+1F469,👩,woman
+145,U+1F469 U+1F3FB,👩🏻,woman: light skin tone
+146,U+1F469 U+1F3FC,👩🏼,woman: medium-light skin tone
+147,U+1F469 U+1F3FD,👩🏽,woman: medium skin tone
+148,U+1F469 U+1F3FE,👩🏾,woman: medium-dark skin tone
+149,U+1F469 U+1F3FF,👩🏿,woman: dark skin tone
+156,U+1F474,👴,old man
+157,U+1F474 U+1F3FB,👴🏻,old man: light skin tone
+158,U+1F474 U+1F3FC,👴🏼,old man: medium-light skin tone
+159,U+1F474 U+1F3FD,👴🏽,old man: medium skin tone
+160,U+1F474 U+1F3FE,👴🏾,old man: medium-dark skin tone
+161,U+1F474 U+1F3FF,👴🏿,old man: dark skin tone
+162,U+1F475,👵,old woman
+163,U+1F475 U+1F3FB,👵🏻,old woman: light skin tone
+164,U+1F475 U+1F3FC,👵🏼,old woman: medium-light skin tone
+165,U+1F475 U+1F3FD,👵🏽,old woman: medium skin tone
+166,U+1F475 U+1F3FE,👵🏾,old woman: medium-dark skin tone
+167,U+1F475 U+1F3FF,👵🏿,old woman: dark skin tone

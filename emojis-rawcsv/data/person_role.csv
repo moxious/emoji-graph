@@ -1,0 +1,337 @@
+column_a,code,browser,cldr_short_name
+168,U+1F468 U+200D U+2695 U+FE0F,👨‍⚕️,man health worker
+169,U+1F468 U+1F3FB U+200D U+2695 U+FE0F,👨🏻‍⚕️,man health worker: light skin tone
+170,U+1F468 U+1F3FC U+200D U+2695 U+FE0F,👨🏼‍⚕️,man health worker: medium-light skin tone
+171,U+1F468 U+1F3FD U+200D U+2695 U+FE0F,👨🏽‍⚕️,man health worker: medium skin tone
+172,U+1F468 U+1F3FE U+200D U+2695 U+FE0F,👨🏾‍⚕️,man health worker: medium-dark skin tone
+173,U+1F468 U+1F3FF U+200D U+2695 U+FE0F,👨🏿‍⚕️,man health worker: dark skin tone
+174,U+1F469 U+200D U+2695 U+FE0F,👩‍⚕️,woman health worker
+175,U+1F469 U+1F3FB U+200D U+2695 U+FE0F,👩🏻‍⚕️,woman health worker: light skin tone
+176,U+1F469 U+1F3FC U+200D U+2695 U+FE0F,👩🏼‍⚕️,woman health worker: medium-light skin tone
+177,U+1F469 U+1F3FD U+200D U+2695 U+FE0F,👩🏽‍⚕️,woman health worker: medium skin tone
+178,U+1F469 U+1F3FE U+200D U+2695 U+FE0F,👩🏾‍⚕️,woman health worker: medium-dark skin tone
+179,U+1F469 U+1F3FF U+200D U+2695 U+FE0F,👩🏿‍⚕️,woman health worker: dark skin tone
+180,U+1F468 U+200D U+1F393,👨‍🎓,man student
+181,U+1F468 U+1F3FB U+200D U+1F393,👨🏻‍🎓,man student: light skin tone
+182,U+1F468 U+1F3FC U+200D U+1F393,👨🏼‍🎓,man student: medium-light skin tone
+183,U+1F468 U+1F3FD U+200D U+1F393,👨🏽‍🎓,man student: medium skin tone
+184,U+1F468 U+1F3FE U+200D U+1F393,👨🏾‍🎓,man student: medium-dark skin tone
+185,U+1F468 U+1F3FF U+200D U+1F393,👨🏿‍🎓,man student: dark skin tone
+186,U+1F469 U+200D U+1F393,👩‍🎓,woman student
+187,U+1F469 U+1F3FB U+200D U+1F393,👩🏻‍🎓,woman student: light skin tone
+188,U+1F469 U+1F3FC U+200D U+1F393,👩🏼‍🎓,woman student: medium-light skin tone
+189,U+1F469 U+1F3FD U+200D U+1F393,👩🏽‍🎓,woman student: medium skin tone
+190,U+1F469 U+1F3FE U+200D U+1F393,👩🏾‍🎓,woman student: medium-dark skin tone
+191,U+1F469 U+1F3FF U+200D U+1F393,👩🏿‍🎓,woman student: dark skin tone
+192,U+1F468 U+200D U+1F3EB,👨‍🏫,man teacher
+193,U+1F468 U+1F3FB U+200D U+1F3EB,👨🏻‍🏫,man teacher: light skin tone
+194,U+1F468 U+1F3FC U+200D U+1F3EB,👨🏼‍🏫,man teacher: medium-light skin tone
+195,U+1F468 U+1F3FD U+200D U+1F3EB,👨🏽‍🏫,man teacher: medium skin tone
+196,U+1F468 U+1F3FE U+200D U+1F3EB,👨🏾‍🏫,man teacher: medium-dark skin tone
+197,U+1F468 U+1F3FF U+200D U+1F3EB,👨🏿‍🏫,man teacher: dark skin tone
+198,U+1F469 U+200D U+1F3EB,👩‍🏫,woman teacher
+199,U+1F469 U+1F3FB U+200D U+1F3EB,👩🏻‍🏫,woman teacher: light skin tone
+200,U+1F469 U+1F3FC U+200D U+1F3EB,👩🏼‍🏫,woman teacher: medium-light skin tone
+201,U+1F469 U+1F3FD U+200D U+1F3EB,👩🏽‍🏫,woman teacher: medium skin tone
+202,U+1F469 U+1F3FE U+200D U+1F3EB,👩🏾‍🏫,woman teacher: medium-dark skin tone
+203,U+1F469 U+1F3FF U+200D U+1F3EB,👩🏿‍🏫,woman teacher: dark skin tone
+204,U+1F468 U+200D U+2696 U+FE0F,👨‍⚖️,man judge
+205,U+1F468 U+1F3FB U+200D U+2696 U+FE0F,👨🏻‍⚖️,man judge: light skin tone
+206,U+1F468 U+1F3FC U+200D U+2696 U+FE0F,👨🏼‍⚖️,man judge: medium-light skin tone
+207,U+1F468 U+1F3FD U+200D U+2696 U+FE0F,👨🏽‍⚖️,man judge: medium skin tone
+208,U+1F468 U+1F3FE U+200D U+2696 U+FE0F,👨🏾‍⚖️,man judge: medium-dark skin tone
+209,U+1F468 U+1F3FF U+200D U+2696 U+FE0F,👨🏿‍⚖️,man judge: dark skin tone
+210,U+1F469 U+200D U+2696 U+FE0F,👩‍⚖️,woman judge
+211,U+1F469 U+1F3FB U+200D U+2696 U+FE0F,👩🏻‍⚖️,woman judge: light skin tone
+212,U+1F469 U+1F3FC U+200D U+2696 U+FE0F,👩🏼‍⚖️,woman judge: medium-light skin tone
+213,U+1F469 U+1F3FD U+200D U+2696 U+FE0F,👩🏽‍⚖️,woman judge: medium skin tone
+214,U+1F469 U+1F3FE U+200D U+2696 U+FE0F,👩🏾‍⚖️,woman judge: medium-dark skin tone
+215,U+1F469 U+1F3FF U+200D U+2696 U+FE0F,👩🏿‍⚖️,woman judge: dark skin tone
+216,U+1F468 U+200D U+1F33E,👨‍🌾,man farmer
+217,U+1F468 U+1F3FB U+200D U+1F33E,👨🏻‍🌾,man farmer: light skin tone
+218,U+1F468 U+1F3FC U+200D U+1F33E,👨🏼‍🌾,man farmer: medium-light skin tone
+219,U+1F468 U+1F3FD U+200D U+1F33E,👨🏽‍🌾,man farmer: medium skin tone
+220,U+1F468 U+1F3FE U+200D U+1F33E,👨🏾‍🌾,man farmer: medium-dark skin tone
+221,U+1F468 U+1F3FF U+200D U+1F33E,👨🏿‍🌾,man farmer: dark skin tone
+222,U+1F469 U+200D U+1F33E,👩‍🌾,woman farmer
+223,U+1F469 U+1F3FB U+200D U+1F33E,👩🏻‍🌾,woman farmer: light skin tone
+224,U+1F469 U+1F3FC U+200D U+1F33E,👩🏼‍🌾,woman farmer: medium-light skin tone
+225,U+1F469 U+1F3FD U+200D U+1F33E,👩🏽‍🌾,woman farmer: medium skin tone
+226,U+1F469 U+1F3FE U+200D U+1F33E,👩🏾‍🌾,woman farmer: medium-dark skin tone
+227,U+1F469 U+1F3FF U+200D U+1F33E,👩🏿‍🌾,woman farmer: dark skin tone
+228,U+1F468 U+200D U+1F373,👨‍🍳,man cook
+229,U+1F468 U+1F3FB U+200D U+1F373,👨🏻‍🍳,man cook: light skin tone
+230,U+1F468 U+1F3FC U+200D U+1F373,👨🏼‍🍳,man cook: medium-light skin tone
+231,U+1F468 U+1F3FD U+200D U+1F373,👨🏽‍🍳,man cook: medium skin tone
+232,U+1F468 U+1F3FE U+200D U+1F373,👨🏾‍🍳,man cook: medium-dark skin tone
+233,U+1F468 U+1F3FF U+200D U+1F373,👨🏿‍🍳,man cook: dark skin tone
+234,U+1F469 U+200D U+1F373,👩‍🍳,woman cook
+235,U+1F469 U+1F3FB U+200D U+1F373,👩🏻‍🍳,woman cook: light skin tone
+236,U+1F469 U+1F3FC U+200D U+1F373,👩🏼‍🍳,woman cook: medium-light skin tone
+237,U+1F469 U+1F3FD U+200D U+1F373,👩🏽‍🍳,woman cook: medium skin tone
+238,U+1F469 U+1F3FE U+200D U+1F373,👩🏾‍🍳,woman cook: medium-dark skin tone
+239,U+1F469 U+1F3FF U+200D U+1F373,👩🏿‍🍳,woman cook: dark skin tone
+240,U+1F468 U+200D U+1F527,👨‍🔧,man mechanic
+241,U+1F468 U+1F3FB U+200D U+1F527,👨🏻‍🔧,man mechanic: light skin tone
+242,U+1F468 U+1F3FC U+200D U+1F527,👨🏼‍🔧,man mechanic: medium-light skin tone
+243,U+1F468 U+1F3FD U+200D U+1F527,👨🏽‍🔧,man mechanic: medium skin tone
+244,U+1F468 U+1F3FE U+200D U+1F527,👨🏾‍🔧,man mechanic: medium-dark skin tone
+245,U+1F468 U+1F3FF U+200D U+1F527,👨🏿‍🔧,man mechanic: dark skin tone
+246,U+1F469 U+200D U+1F527,👩‍🔧,woman mechanic
+247,U+1F469 U+1F3FB U+200D U+1F527,👩🏻‍🔧,woman mechanic: light skin tone
+248,U+1F469 U+1F3FC U+200D U+1F527,👩🏼‍🔧,woman mechanic: medium-light skin tone
+249,U+1F469 U+1F3FD U+200D U+1F527,👩🏽‍🔧,woman mechanic: medium skin tone
+250,U+1F469 U+1F3FE U+200D U+1F527,👩🏾‍🔧,woman mechanic: medium-dark skin tone
+251,U+1F469 U+1F3FF U+200D U+1F527,👩🏿‍🔧,woman mechanic: dark skin tone
+252,U+1F468 U+200D U+1F3ED,👨‍🏭,man factory worker
+253,U+1F468 U+1F3FB U+200D U+1F3ED,👨🏻‍🏭,man factory worker: light skin tone
+254,U+1F468 U+1F3FC U+200D U+1F3ED,👨🏼‍🏭,man factory worker: medium-light skin tone
+255,U+1F468 U+1F3FD U+200D U+1F3ED,👨🏽‍🏭,man factory worker: medium skin tone
+256,U+1F468 U+1F3FE U+200D U+1F3ED,👨🏾‍🏭,man factory worker: medium-dark skin tone
+257,U+1F468 U+1F3FF U+200D U+1F3ED,👨🏿‍🏭,man factory worker: dark skin tone
+258,U+1F469 U+200D U+1F3ED,👩‍🏭,woman factory worker
+259,U+1F469 U+1F3FB U+200D U+1F3ED,👩🏻‍🏭,woman factory worker: light skin tone
+260,U+1F469 U+1F3FC U+200D U+1F3ED,👩🏼‍🏭,woman factory worker: medium-light skin tone
+261,U+1F469 U+1F3FD U+200D U+1F3ED,👩🏽‍🏭,woman factory worker: medium skin tone
+262,U+1F469 U+1F3FE U+200D U+1F3ED,👩🏾‍🏭,woman factory worker: medium-dark skin tone
+263,U+1F469 U+1F3FF U+200D U+1F3ED,👩🏿‍🏭,woman factory worker: dark skin tone
+264,U+1F468 U+200D U+1F4BC,👨‍💼,man office worker
+265,U+1F468 U+1F3FB U+200D U+1F4BC,👨🏻‍💼,man office worker: light skin tone
+266,U+1F468 U+1F3FC U+200D U+1F4BC,👨🏼‍💼,man office worker: medium-light skin tone
+267,U+1F468 U+1F3FD U+200D U+1F4BC,👨🏽‍💼,man office worker: medium skin tone
+268,U+1F468 U+1F3FE U+200D U+1F4BC,👨🏾‍💼,man office worker: medium-dark skin tone
+269,U+1F468 U+1F3FF U+200D U+1F4BC,👨🏿‍💼,man office worker: dark skin tone
+270,U+1F469 U+200D U+1F4BC,👩‍💼,woman office worker
+271,U+1F469 U+1F3FB U+200D U+1F4BC,👩🏻‍💼,woman office worker: light skin tone
+272,U+1F469 U+1F3FC U+200D U+1F4BC,👩🏼‍💼,woman office worker: medium-light skin tone
+273,U+1F469 U+1F3FD U+200D U+1F4BC,👩🏽‍💼,woman office worker: medium skin tone
+274,U+1F469 U+1F3FE U+200D U+1F4BC,👩🏾‍💼,woman office worker: medium-dark skin tone
+275,U+1F469 U+1F3FF U+200D U+1F4BC,👩🏿‍💼,woman office worker: dark skin tone
+276,U+1F468 U+200D U+1F52C,👨‍🔬,man scientist
+277,U+1F468 U+1F3FB U+200D U+1F52C,👨🏻‍🔬,man scientist: light skin tone
+278,U+1F468 U+1F3FC U+200D U+1F52C,👨🏼‍🔬,man scientist: medium-light skin tone
+279,U+1F468 U+1F3FD U+200D U+1F52C,👨🏽‍🔬,man scientist: medium skin tone
+280,U+1F468 U+1F3FE U+200D U+1F52C,👨🏾‍🔬,man scientist: medium-dark skin tone
+281,U+1F468 U+1F3FF U+200D U+1F52C,👨🏿‍🔬,man scientist: dark skin tone
+282,U+1F469 U+200D U+1F52C,👩‍🔬,woman scientist
+283,U+1F469 U+1F3FB U+200D U+1F52C,👩🏻‍🔬,woman scientist: light skin tone
+284,U+1F469 U+1F3FC U+200D U+1F52C,👩🏼‍🔬,woman scientist: medium-light skin tone
+285,U+1F469 U+1F3FD U+200D U+1F52C,👩🏽‍🔬,woman scientist: medium skin tone
+286,U+1F469 U+1F3FE U+200D U+1F52C,👩🏾‍🔬,woman scientist: medium-dark skin tone
+287,U+1F469 U+1F3FF U+200D U+1F52C,👩🏿‍🔬,woman scientist: dark skin tone
+288,U+1F468 U+200D U+1F4BB,👨‍💻,man technologist
+289,U+1F468 U+1F3FB U+200D U+1F4BB,👨🏻‍💻,man technologist: light skin tone
+290,U+1F468 U+1F3FC U+200D U+1F4BB,👨🏼‍💻,man technologist: medium-light skin tone
+291,U+1F468 U+1F3FD U+200D U+1F4BB,👨🏽‍💻,man technologist: medium skin tone
+292,U+1F468 U+1F3FE U+200D U+1F4BB,👨🏾‍💻,man technologist: medium-dark skin tone
+293,U+1F468 U+1F3FF U+200D U+1F4BB,👨🏿‍💻,man technologist: dark skin tone
+294,U+1F469 U+200D U+1F4BB,👩‍💻,woman technologist
+295,U+1F469 U+1F3FB U+200D U+1F4BB,👩🏻‍💻,woman technologist: light skin tone
+296,U+1F469 U+1F3FC U+200D U+1F4BB,👩🏼‍💻,woman technologist: medium-light skin tone
+297,U+1F469 U+1F3FD U+200D U+1F4BB,👩🏽‍💻,woman technologist: medium skin tone
+298,U+1F469 U+1F3FE U+200D U+1F4BB,👩🏾‍💻,woman technologist: medium-dark skin tone
+299,U+1F469 U+1F3FF U+200D U+1F4BB,👩🏿‍💻,woman technologist: dark skin tone
+300,U+1F468 U+200D U+1F3A4,👨‍🎤,man singer
+301,U+1F468 U+1F3FB U+200D U+1F3A4,👨🏻‍🎤,man singer: light skin tone
+302,U+1F468 U+1F3FC U+200D U+1F3A4,👨🏼‍🎤,man singer: medium-light skin tone
+303,U+1F468 U+1F3FD U+200D U+1F3A4,👨🏽‍🎤,man singer: medium skin tone
+304,U+1F468 U+1F3FE U+200D U+1F3A4,👨🏾‍🎤,man singer: medium-dark skin tone
+305,U+1F468 U+1F3FF U+200D U+1F3A4,👨🏿‍🎤,man singer: dark skin tone
+306,U+1F469 U+200D U+1F3A4,👩‍🎤,woman singer
+307,U+1F469 U+1F3FB U+200D U+1F3A4,👩🏻‍🎤,woman singer: light skin tone
+308,U+1F469 U+1F3FC U+200D U+1F3A4,👩🏼‍🎤,woman singer: medium-light skin tone
+309,U+1F469 U+1F3FD U+200D U+1F3A4,👩🏽‍🎤,woman singer: medium skin tone
+310,U+1F469 U+1F3FE U+200D U+1F3A4,👩🏾‍🎤,woman singer: medium-dark skin tone
+311,U+1F469 U+1F3FF U+200D U+1F3A4,👩🏿‍🎤,woman singer: dark skin tone
+312,U+1F468 U+200D U+1F3A8,👨‍🎨,man artist
+313,U+1F468 U+1F3FB U+200D U+1F3A8,👨🏻‍🎨,man artist: light skin tone
+314,U+1F468 U+1F3FC U+200D U+1F3A8,👨🏼‍🎨,man artist: medium-light skin tone
+315,U+1F468 U+1F3FD U+200D U+1F3A8,👨🏽‍🎨,man artist: medium skin tone
+316,U+1F468 U+1F3FE U+200D U+1F3A8,👨🏾‍🎨,man artist: medium-dark skin tone
+317,U+1F468 U+1F3FF U+200D U+1F3A8,👨🏿‍🎨,man artist: dark skin tone
+318,U+1F469 U+200D U+1F3A8,👩‍🎨,woman artist
+319,U+1F469 U+1F3FB U+200D U+1F3A8,👩🏻‍🎨,woman artist: light skin tone
+320,U+1F469 U+1F3FC U+200D U+1F3A8,👩🏼‍🎨,woman artist: medium-light skin tone
+321,U+1F469 U+1F3FD U+200D U+1F3A8,👩🏽‍🎨,woman artist: medium skin tone
+322,U+1F469 U+1F3FE U+200D U+1F3A8,👩🏾‍🎨,woman artist: medium-dark skin tone
+323,U+1F469 U+1F3FF U+200D U+1F3A8,👩🏿‍🎨,woman artist: dark skin tone
+324,U+1F468 U+200D U+2708 U+FE0F,👨‍✈️,man pilot
+325,U+1F468 U+1F3FB U+200D U+2708 U+FE0F,👨🏻‍✈️,man pilot: light skin tone
+326,U+1F468 U+1F3FC U+200D U+2708 U+FE0F,👨🏼‍✈️,man pilot: medium-light skin tone
+327,U+1F468 U+1F3FD U+200D U+2708 U+FE0F,👨🏽‍✈️,man pilot: medium skin tone
+328,U+1F468 U+1F3FE U+200D U+2708 U+FE0F,👨🏾‍✈️,man pilot: medium-dark skin tone
+329,U+1F468 U+1F3FF U+200D U+2708 U+FE0F,👨🏿‍✈️,man pilot: dark skin tone
+330,U+1F469 U+200D U+2708 U+FE0F,👩‍✈️,woman pilot
+331,U+1F469 U+1F3FB U+200D U+2708 U+FE0F,👩🏻‍✈️,woman pilot: light skin tone
+332,U+1F469 U+1F3FC U+200D U+2708 U+FE0F,👩🏼‍✈️,woman pilot: medium-light skin tone
+333,U+1F469 U+1F3FD U+200D U+2708 U+FE0F,👩🏽‍✈️,woman pilot: medium skin tone
+334,U+1F469 U+1F3FE U+200D U+2708 U+FE0F,👩🏾‍✈️,woman pilot: medium-dark skin tone
+335,U+1F469 U+1F3FF U+200D U+2708 U+FE0F,👩🏿‍✈️,woman pilot: dark skin tone
+336,U+1F468 U+200D U+1F680,👨‍🚀,man astronaut
+337,U+1F468 U+1F3FB U+200D U+1F680,👨🏻‍🚀,man astronaut: light skin tone
+338,U+1F468 U+1F3FC U+200D U+1F680,👨🏼‍🚀,man astronaut: medium-light skin tone
+339,U+1F468 U+1F3FD U+200D U+1F680,👨🏽‍🚀,man astronaut: medium skin tone
+340,U+1F468 U+1F3FE U+200D U+1F680,👨🏾‍🚀,man astronaut: medium-dark skin tone
+341,U+1F468 U+1F3FF U+200D U+1F680,👨🏿‍🚀,man astronaut: dark skin tone
+342,U+1F469 U+200D U+1F680,👩‍🚀,woman astronaut
+343,U+1F469 U+1F3FB U+200D U+1F680,👩🏻‍🚀,woman astronaut: light skin tone
+344,U+1F469 U+1F3FC U+200D U+1F680,👩🏼‍🚀,woman astronaut: medium-light skin tone
+345,U+1F469 U+1F3FD U+200D U+1F680,👩🏽‍🚀,woman astronaut: medium skin tone
+346,U+1F469 U+1F3FE U+200D U+1F680,👩🏾‍🚀,woman astronaut: medium-dark skin tone
+347,U+1F469 U+1F3FF U+200D U+1F680,👩🏿‍🚀,woman astronaut: dark skin tone
+348,U+1F468 U+200D U+1F692,👨‍🚒,man firefighter
+349,U+1F468 U+1F3FB U+200D U+1F692,👨🏻‍🚒,man firefighter: light skin tone
+350,U+1F468 U+1F3FC U+200D U+1F692,👨🏼‍🚒,man firefighter: medium-light skin tone
+351,U+1F468 U+1F3FD U+200D U+1F692,👨🏽‍🚒,man firefighter: medium skin tone
+352,U+1F468 U+1F3FE U+200D U+1F692,👨🏾‍🚒,man firefighter: medium-dark skin tone
+353,U+1F468 U+1F3FF U+200D U+1F692,👨🏿‍🚒,man firefighter: dark skin tone
+354,U+1F469 U+200D U+1F692,👩‍🚒,woman firefighter
+355,U+1F469 U+1F3FB U+200D U+1F692,👩🏻‍🚒,woman firefighter: light skin tone
+356,U+1F469 U+1F3FC U+200D U+1F692,👩🏼‍🚒,woman firefighter: medium-light skin tone
+357,U+1F469 U+1F3FD U+200D U+1F692,👩🏽‍🚒,woman firefighter: medium skin tone
+358,U+1F469 U+1F3FE U+200D U+1F692,👩🏾‍🚒,woman firefighter: medium-dark skin tone
+359,U+1F469 U+1F3FF U+200D U+1F692,👩🏿‍🚒,woman firefighter: dark skin tone
+360,U+1F46E,👮,police officer
+361,U+1F46E U+1F3FB,👮🏻,police officer: light skin tone
+362,U+1F46E U+1F3FC,👮🏼,police officer: medium-light skin tone
+363,U+1F46E U+1F3FD,👮🏽,police officer: medium skin tone
+364,U+1F46E U+1F3FE,👮🏾,police officer: medium-dark skin tone
+365,U+1F46E U+1F3FF,👮🏿,police officer: dark skin tone
+366,U+1F46E U+200D U+2642 U+FE0F,👮‍♂️,man police officer
+367,U+1F46E U+1F3FB U+200D U+2642 U+FE0F,👮🏻‍♂️,man police officer: light skin tone
+368,U+1F46E U+1F3FC U+200D U+2642 U+FE0F,👮🏼‍♂️,man police officer: medium-light skin tone
+369,U+1F46E U+1F3FD U+200D U+2642 U+FE0F,👮🏽‍♂️,man police officer: medium skin tone
+370,U+1F46E U+1F3FE U+200D U+2642 U+FE0F,👮🏾‍♂️,man police officer: medium-dark skin tone
+371,U+1F46E U+1F3FF U+200D U+2642 U+FE0F,👮🏿‍♂️,man police officer: dark skin tone
+372,U+1F46E U+200D U+2640 U+FE0F,👮‍♀️,woman police officer
+373,U+1F46E U+1F3FB U+200D U+2640 U+FE0F,👮🏻‍♀️,woman police officer: light skin tone
+374,U+1F46E U+1F3FC U+200D U+2640 U+FE0F,👮🏼‍♀️,woman police officer: medium-light skin tone
+375,U+1F46E U+1F3FD U+200D U+2640 U+FE0F,👮🏽‍♀️,woman police officer: medium skin tone
+376,U+1F46E U+1F3FE U+200D U+2640 U+FE0F,👮🏾‍♀️,woman police officer: medium-dark skin tone
+377,U+1F46E U+1F3FF U+200D U+2640 U+FE0F,👮🏿‍♀️,woman police officer: dark skin tone
+378,U+1F575,🕵,detective
+379,U+1F575 U+1F3FB,🕵🏻,detective: light skin tone
+380,U+1F575 U+1F3FC,🕵🏼,detective: medium-light skin tone
+381,U+1F575 U+1F3FD,🕵🏽,detective: medium skin tone
+382,U+1F575 U+1F3FE,🕵🏾,detective: medium-dark skin tone
+383,U+1F575 U+1F3FF,🕵🏿,detective: dark skin tone
+384,U+1F575 U+FE0F U+200D U+2642 U+FE0F,🕵️‍♂️,man detective
+385,U+1F575 U+1F3FB U+200D U+2642 U+FE0F,🕵🏻‍♂️,man detective: light skin tone
+386,U+1F575 U+1F3FC U+200D U+2642 U+FE0F,🕵🏼‍♂️,man detective: medium-light skin tone
+387,U+1F575 U+1F3FD U+200D U+2642 U+FE0F,🕵🏽‍♂️,man detective: medium skin tone
+388,U+1F575 U+1F3FE U+200D U+2642 U+FE0F,🕵🏾‍♂️,man detective: medium-dark skin tone
+389,U+1F575 U+1F3FF U+200D U+2642 U+FE0F,🕵🏿‍♂️,man detective: dark skin tone
+390,U+1F575 U+FE0F U+200D U+2640 U+FE0F,🕵️‍♀️,woman detective
+391,U+1F575 U+1F3FB U+200D U+2640 U+FE0F,🕵🏻‍♀️,woman detective: light skin tone
+392,U+1F575 U+1F3FC U+200D U+2640 U+FE0F,🕵🏼‍♀️,woman detective: medium-light skin tone
+393,U+1F575 U+1F3FD U+200D U+2640 U+FE0F,🕵🏽‍♀️,woman detective: medium skin tone
+394,U+1F575 U+1F3FE U+200D U+2640 U+FE0F,🕵🏾‍♀️,woman detective: medium-dark skin tone
+395,U+1F575 U+1F3FF U+200D U+2640 U+FE0F,🕵🏿‍♀️,woman detective: dark skin tone
+396,U+1F482,💂,guard
+397,U+1F482 U+1F3FB,💂🏻,guard: light skin tone
+398,U+1F482 U+1F3FC,💂🏼,guard: medium-light skin tone
+399,U+1F482 U+1F3FD,💂🏽,guard: medium skin tone
+400,U+1F482 U+1F3FE,💂🏾,guard: medium-dark skin tone
+401,U+1F482 U+1F3FF,💂🏿,guard: dark skin tone
+402,U+1F482 U+200D U+2642 U+FE0F,💂‍♂️,man guard
+403,U+1F482 U+1F3FB U+200D U+2642 U+FE0F,💂🏻‍♂️,man guard: light skin tone
+404,U+1F482 U+1F3FC U+200D U+2642 U+FE0F,💂🏼‍♂️,man guard: medium-light skin tone
+405,U+1F482 U+1F3FD U+200D U+2642 U+FE0F,💂🏽‍♂️,man guard: medium skin tone
+406,U+1F482 U+1F3FE U+200D U+2642 U+FE0F,💂🏾‍♂️,man guard: medium-dark skin tone
+407,U+1F482 U+1F3FF U+200D U+2642 U+FE0F,💂🏿‍♂️,man guard: dark skin tone
+408,U+1F482 U+200D U+2640 U+FE0F,💂‍♀️,woman guard
+409,U+1F482 U+1F3FB U+200D U+2640 U+FE0F,💂🏻‍♀️,woman guard: light skin tone
+410,U+1F482 U+1F3FC U+200D U+2640 U+FE0F,💂🏼‍♀️,woman guard: medium-light skin tone
+411,U+1F482 U+1F3FD U+200D U+2640 U+FE0F,💂🏽‍♀️,woman guard: medium skin tone
+412,U+1F482 U+1F3FE U+200D U+2640 U+FE0F,💂🏾‍♀️,woman guard: medium-dark skin tone
+413,U+1F482 U+1F3FF U+200D U+2640 U+FE0F,💂🏿‍♀️,woman guard: dark skin tone
+414,U+1F477,👷,construction worker
+415,U+1F477 U+1F3FB,👷🏻,construction worker: light skin tone
+416,U+1F477 U+1F3FC,👷🏼,construction worker: medium-light skin tone
+417,U+1F477 U+1F3FD,👷🏽,construction worker: medium skin tone
+418,U+1F477 U+1F3FE,👷🏾,construction worker: medium-dark skin tone
+419,U+1F477 U+1F3FF,👷🏿,construction worker: dark skin tone
+420,U+1F477 U+200D U+2642 U+FE0F,👷‍♂️,man construction worker
+421,U+1F477 U+1F3FB U+200D U+2642 U+FE0F,👷🏻‍♂️,man construction worker: light skin tone
+422,U+1F477 U+1F3FC U+200D U+2642 U+FE0F,👷🏼‍♂️,man construction worker: medium-light skin tone
+423,U+1F477 U+1F3FD U+200D U+2642 U+FE0F,👷🏽‍♂️,man construction worker: medium skin tone
+424,U+1F477 U+1F3FE U+200D U+2642 U+FE0F,👷🏾‍♂️,man construction worker: medium-dark skin tone
+425,U+1F477 U+1F3FF U+200D U+2642 U+FE0F,👷🏿‍♂️,man construction worker: dark skin tone
+426,U+1F477 U+200D U+2640 U+FE0F,👷‍♀️,woman construction worker
+427,U+1F477 U+1F3FB U+200D U+2640 U+FE0F,👷🏻‍♀️,woman construction worker: light skin tone
+428,U+1F477 U+1F3FC U+200D U+2640 U+FE0F,👷🏼‍♀️,woman construction worker: medium-light skin tone
+429,U+1F477 U+1F3FD U+200D U+2640 U+FE0F,👷🏽‍♀️,woman construction worker: medium skin tone
+430,U+1F477 U+1F3FE U+200D U+2640 U+FE0F,👷🏾‍♀️,woman construction worker: medium-dark skin tone
+431,U+1F477 U+1F3FF U+200D U+2640 U+FE0F,👷🏿‍♀️,woman construction worker: dark skin tone
+432,U+1F934,🤴,prince
+433,U+1F934 U+1F3FB,🤴🏻,prince: light skin tone
+434,U+1F934 U+1F3FC,🤴🏼,prince: medium-light skin tone
+435,U+1F934 U+1F3FD,🤴🏽,prince: medium skin tone
+436,U+1F934 U+1F3FE,🤴🏾,prince: medium-dark skin tone
+437,U+1F934 U+1F3FF,🤴🏿,prince: dark skin tone
+438,U+1F478,👸,princess
+439,U+1F478 U+1F3FB,👸🏻,princess: light skin tone
+440,U+1F478 U+1F3FC,👸🏼,princess: medium-light skin tone
+441,U+1F478 U+1F3FD,👸🏽,princess: medium skin tone
+442,U+1F478 U+1F3FE,👸🏾,princess: medium-dark skin tone
+443,U+1F478 U+1F3FF,👸🏿,princess: dark skin tone
+444,U+1F473,👳,person wearing turban
+445,U+1F473 U+1F3FB,👳🏻,person wearing turban: light skin tone
+446,U+1F473 U+1F3FC,👳🏼,person wearing turban: medium-light skin tone
+447,U+1F473 U+1F3FD,👳🏽,person wearing turban: medium skin tone
+448,U+1F473 U+1F3FE,👳🏾,person wearing turban: medium-dark skin tone
+449,U+1F473 U+1F3FF,👳🏿,person wearing turban: dark skin tone
+450,U+1F473 U+200D U+2642 U+FE0F,👳‍♂️,man wearing turban
+451,U+1F473 U+1F3FB U+200D U+2642 U+FE0F,👳🏻‍♂️,man wearing turban: light skin tone
+452,U+1F473 U+1F3FC U+200D U+2642 U+FE0F,👳🏼‍♂️,man wearing turban: medium-light skin tone
+453,U+1F473 U+1F3FD U+200D U+2642 U+FE0F,👳🏽‍♂️,man wearing turban: medium skin tone
+454,U+1F473 U+1F3FE U+200D U+2642 U+FE0F,👳🏾‍♂️,man wearing turban: medium-dark skin tone
+455,U+1F473 U+1F3FF U+200D U+2642 U+FE0F,👳🏿‍♂️,man wearing turban: dark skin tone
+456,U+1F473 U+200D U+2640 U+FE0F,👳‍♀️,woman wearing turban
+457,U+1F473 U+1F3FB U+200D U+2640 U+FE0F,👳🏻‍♀️,woman wearing turban: light skin tone
+458,U+1F473 U+1F3FC U+200D U+2640 U+FE0F,👳🏼‍♀️,woman wearing turban: medium-light skin tone
+459,U+1F473 U+1F3FD U+200D U+2640 U+FE0F,👳🏽‍♀️,woman wearing turban: medium skin tone
+460,U+1F473 U+1F3FE U+200D U+2640 U+FE0F,👳🏾‍♀️,woman wearing turban: medium-dark skin tone
+461,U+1F473 U+1F3FF U+200D U+2640 U+FE0F,👳🏿‍♀️,woman wearing turban: dark skin tone
+462,U+1F472,👲,man with Chinese cap
+463,U+1F472 U+1F3FB,👲🏻,man with Chinese cap: light skin tone
+464,U+1F472 U+1F3FC,👲🏼,man with Chinese cap: medium-light skin tone
+465,U+1F472 U+1F3FD,👲🏽,man with Chinese cap: medium skin tone
+466,U+1F472 U+1F3FE,👲🏾,man with Chinese cap: medium-dark skin tone
+467,U+1F472 U+1F3FF,👲🏿,man with Chinese cap: dark skin tone
+480,U+1F471,👱,blond-haired person
+481,U+1F471 U+1F3FB,👱🏻,blond-haired person: light skin tone
+482,U+1F471 U+1F3FC,👱🏼,blond-haired person: medium-light skin tone
+483,U+1F471 U+1F3FD,👱🏽,blond-haired person: medium skin tone
+484,U+1F471 U+1F3FE,👱🏾,blond-haired person: medium-dark skin tone
+485,U+1F471 U+1F3FF,👱🏿,blond-haired person: dark skin tone
+486,U+1F471 U+200D U+2642 U+FE0F,👱‍♂️,blond-haired man
+487,U+1F471 U+1F3FB U+200D U+2642 U+FE0F,👱🏻‍♂️,blond-haired man: light skin tone
+488,U+1F471 U+1F3FC U+200D U+2642 U+FE0F,👱🏼‍♂️,blond-haired man: medium-light skin tone
+489,U+1F471 U+1F3FD U+200D U+2642 U+FE0F,👱🏽‍♂️,blond-haired man: medium skin tone
+490,U+1F471 U+1F3FE U+200D U+2642 U+FE0F,👱🏾‍♂️,blond-haired man: medium-dark skin tone
+491,U+1F471 U+1F3FF U+200D U+2642 U+FE0F,👱🏿‍♂️,blond-haired man: dark skin tone
+492,U+1F471 U+200D U+2640 U+FE0F,👱‍♀️,blond-haired woman
+493,U+1F471 U+1F3FB U+200D U+2640 U+FE0F,👱🏻‍♀️,blond-haired woman: light skin tone
+494,U+1F471 U+1F3FC U+200D U+2640 U+FE0F,👱🏼‍♀️,blond-haired woman: medium-light skin tone
+495,U+1F471 U+1F3FD U+200D U+2640 U+FE0F,👱🏽‍♀️,blond-haired woman: medium skin tone
+496,U+1F471 U+1F3FE U+200D U+2640 U+FE0F,👱🏾‍♀️,blond-haired woman: medium-dark skin tone
+497,U+1F471 U+1F3FF U+200D U+2640 U+FE0F,👱🏿‍♀️,blond-haired woman: dark skin tone
+498,U+1F935,🤵,man in tuxedo
+499,U+1F935 U+1F3FB,🤵🏻,man in tuxedo: light skin tone
+500,U+1F935 U+1F3FC,🤵🏼,man in tuxedo: medium-light skin tone
+501,U+1F935 U+1F3FD,🤵🏽,man in tuxedo: medium skin tone
+502,U+1F935 U+1F3FE,🤵🏾,man in tuxedo: medium-dark skin tone
+503,U+1F935 U+1F3FF,🤵🏿,man in tuxedo: dark skin tone
+504,U+1F470,👰,bride with veil
+505,U+1F470 U+1F3FB,👰🏻,bride with veil: light skin tone
+506,U+1F470 U+1F3FC,👰🏼,bride with veil: medium-light skin tone
+507,U+1F470 U+1F3FD,👰🏽,bride with veil: medium skin tone
+508,U+1F470 U+1F3FE,👰🏾,bride with veil: medium-dark skin tone
+509,U+1F470 U+1F3FF,👰🏿,bride with veil: dark skin tone
+510,U+1F930,🤰,pregnant woman
+511,U+1F930 U+1F3FB,🤰🏻,pregnant woman: light skin tone
+512,U+1F930 U+1F3FC,🤰🏼,pregnant woman: medium-light skin tone
+513,U+1F930 U+1F3FD,🤰🏽,pregnant woman: medium skin tone
+514,U+1F930 U+1F3FE,🤰🏾,pregnant woman: medium-dark skin tone
+515,U+1F930 U+1F3FF,🤰🏿,pregnant woman: dark skin tone

@@ -1,0 +1,38 @@
+column_a,code,browser,cldr_short_name
+1195,U+1F46B,👫,man and woman holding hands
+1196,U+1F46C,👬,two men holding hands
+1197,U+1F46D,👭,two women holding hands
+1198,U+1F48F,💏,kiss
+1199,U+1F469 U+200D U+2764 U+FE0F U+200D U+1F48B U+200D U+1F468,👩‍❤️‍💋‍👨,"kiss: woman, man"
+1200,U+1F468 U+200D U+2764 U+FE0F U+200D U+1F48B U+200D U+1F468,👨‍❤️‍💋‍👨,"kiss: man, man"
+1201,U+1F469 U+200D U+2764 U+FE0F U+200D U+1F48B U+200D U+1F469,👩‍❤️‍💋‍👩,"kiss: woman, woman"
+1202,U+1F491,💑,couple with heart
+1203,U+1F469 U+200D U+2764 U+FE0F U+200D U+1F468,👩‍❤️‍👨,"couple with heart: woman, man"
+1204,U+1F468 U+200D U+2764 U+FE0F U+200D U+1F468,👨‍❤️‍👨,"couple with heart: man, man"
+1205,U+1F469 U+200D U+2764 U+FE0F U+200D U+1F469,👩‍❤️‍👩,"couple with heart: woman, woman"
+1206,U+1F46A,👪,family
+1207,U+1F468 U+200D U+1F469 U+200D U+1F466,👨‍👩‍👦,"family: man, woman, boy"
+1208,U+1F468 U+200D U+1F469 U+200D U+1F467,👨‍👩‍👧,"family: man, woman, girl"
+1209,U+1F468 U+200D U+1F469 U+200D U+1F467 U+200D U+1F466,👨‍👩‍👧‍👦,"family: man, woman, girl, boy"
+1210,U+1F468 U+200D U+1F469 U+200D U+1F466 U+200D U+1F466,👨‍👩‍👦‍👦,"family: man, woman, boy, boy"
+1211,U+1F468 U+200D U+1F469 U+200D U+1F467 U+200D U+1F467,👨‍👩‍👧‍👧,"family: man, woman, girl, girl"
+1212,U+1F468 U+200D U+1F468 U+200D U+1F466,👨‍👨‍👦,"family: man, man, boy"
+1213,U+1F468 U+200D U+1F468 U+200D U+1F467,👨‍👨‍👧,"family: man, man, girl"
+1214,U+1F468 U+200D U+1F468 U+200D U+1F467 U+200D U+1F466,👨‍👨‍👧‍👦,"family: man, man, girl, boy"
+1215,U+1F468 U+200D U+1F468 U+200D U+1F466 U+200D U+1F466,👨‍👨‍👦‍👦,"family: man, man, boy, boy"
+1216,U+1F468 U+200D U+1F468 U+200D U+1F467 U+200D U+1F467,👨‍👨‍👧‍👧,"family: man, man, girl, girl"
+1217,U+1F469 U+200D U+1F469 U+200D U+1F466,👩‍👩‍👦,"family: woman, woman, boy"
+1218,U+1F469 U+200D U+1F469 U+200D U+1F467,👩‍👩‍👧,"family: woman, woman, girl"
+1219,U+1F469 U+200D U+1F469 U+200D U+1F467 U+200D U+1F466,👩‍👩‍👧‍👦,"family: woman, woman, girl, boy"
+1220,U+1F469 U+200D U+1F469 U+200D U+1F466 U+200D U+1F466,👩‍👩‍👦‍👦,"family: woman, woman, boy, boy"
+1221,U+1F469 U+200D U+1F469 U+200D U+1F467 U+200D U+1F467,👩‍👩‍👧‍👧,"family: woman, woman, girl, girl"
+1222,U+1F468 U+200D U+1F466,👨‍👦,"family: man, boy"
+1223,U+1F468 U+200D U+1F466 U+200D U+1F466,👨‍👦‍👦,"family: man, boy, boy"
+1224,U+1F468 U+200D U+1F467,👨‍👧,"family: man, girl"
+1225,U+1F468 U+200D U+1F467 U+200D U+1F466,👨‍👧‍👦,"family: man, girl, boy"
+1226,U+1F468 U+200D U+1F467 U+200D U+1F467,👨‍👧‍👧,"family: man, girl, girl"
+1227,U+1F469 U+200D U+1F466,👩‍👦,"family: woman, boy"
+1228,U+1F469 U+200D U+1F466 U+200D U+1F466,👩‍👦‍👦,"family: woman, boy, boy"
+1229,U+1F469 U+200D U+1F467,👩‍👧,"family: woman, girl"
+1230,U+1F469 U+200D U+1F467 U+200D U+1F466,👩‍👧‍👦,"family: woman, girl, boy"
+1231,U+1F469 U+200D U+1F467 U+200D U+1F467,👩‍👧‍👧,"family: woman, girl, girl"

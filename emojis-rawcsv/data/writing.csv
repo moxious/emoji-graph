@@ -1,0 +1,14 @@
+column_a,code,browser,cldr_short_name
+2077,U+2709,✉,envelope
+2078,U+1F4E7,📧,e-mail
+2079,U+1F4E8,📨,incoming envelope
+2080,U+1F4E9,📩,envelope with arrow
+2081,U+1F4E4,📤,outbox tray
+2082,U+1F4E5,📥,inbox tray
+2083,U+1F4E6,📦,package
+2084,U+1F4EB,📫,closed mailbox with raised flag
+2085,U+1F4EA,📪,closed mailbox with lowered flag
+2086,U+1F4EC,📬,open mailbox with raised flag
+2087,U+1F4ED,📭,open mailbox with lowered flag
+2088,U+1F4EE,📮,postbox
+2089,U+1F5F3,🗳,ballot box with ballot
