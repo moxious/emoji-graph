@@ -1,10 +1,12 @@
+/*
 CREATE INDEX ON :Emoji(name);
 CREATE INDEX ON :Emoji(column_a);
 CREATE INDEX ON :Emoji(browser);
 CREATE INDEX ON :Emoji(code);
 CREATE INDEX ON :Category(name);
+*/
 
-LOAD CSV WITH HEADERS FROM 'https://storage.googleapis.com/meetup-data/emojis/all-emojis.csv' as line
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/moxious/emoji-graph/master/all-emojis.csv' as line
 WITH line
 WHERE line.code is not null
 MERGE (e:Emoji { code: line.code })
@@ -16,12 +18,12 @@ MERGE (c:Category { name: line.category })
 MERGE (e)-[:IN]->(c)
 RETURN count(e);
 
-LOAD CSV WITH HEADERS FROM 'https://storage.googleapis.com/meetup-data/emojis/category.csv' as line
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/moxious/emoji-graph/master/category.csv' as line
 MERGE (c:Category { name: line.category })
 RETURN count(c);
 
 
-LOAD CSV WITH HEADERS FROM 'https://storage.googleapis.com/meetup-data/emojis/similar.csv' as line
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/moxious/emoji-graph/master/similar.csv' as line
 MERGE (a:Category { name: line.categoryA })
 MERGE (b:Category { name: line.categoryB })
 MERGE (a)-[r:SIMILAR]->(b)
@@ -36,4 +38,19 @@ WHERE not word in ['', 'with', 'a', 'the', 'them', 'an']
 MERGE (c:Category { name: word })
    ON CREATE SET c.synthetic = true
 MERGE (e)-[r:RELATED]->(c)
+RETURN count(r);
+
+/* Special case categories */
+WITH [
+  'light skin tone',
+  'medium-light skin tone',
+  'medium skin tone',
+  'medium-dark skin tone',
+  'dark skin tone'
+] as skinToneCategories
+UNWIND skinToneCategories as skinToneCategory
+MATCH (e:Emoji)
+WHERE e.name =~ '.*: ' + skinToneCategory + '.*'
+MERGE (c:Category { name: skinToneCategory })
+MERGE (e)-[r:IN]->(c)
 RETURN count(r);
