@@ -1,0 +1,24 @@
+datasource DS {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = env("BINARY_TARGET")
+}
+
+model Emoji {
+  id        String @id @default(cuid())
+  column_a  Int
+  code      String
+  browser   String
+  name      String
+  category  String
+}
+
+model Story {
+  id        String @id @default(cuid())
+  emojis    String
+  Story     String
+}
