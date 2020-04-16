@@ -29,7 +29,7 @@ RETURN count(r);
 
 /* Create synthetic groupings */
 MATCH (e:Emoji)
-WITH e, apoc.text.split(e.name, '[" \\(\\),:-]+') as words
+WITH e, apoc.text.split(e.name, '[ \\(\\),:-]+') as words
 UNWIND words as word
 WITH e, word
 WHERE not word in ['', 'with', 'a', 'the', 'them', 'an']
@@ -49,13 +49,23 @@ WITH [
 UNWIND skinToneCategories as skinToneCategory
 MATCH (e:Emoji)
 WHERE e.name =~ '.*: ' + skinToneCategory + '.*'
-MERGE (c:Category { name: skinToneCategory })
+MERGE (c:Category { name: skinToneCategory, synthetic: true })
 MERGE (e)-[r:IN]->(c)
 RETURN count(r);
 
 /* workers, fire fighters, officers */
 MATCH (c:Category { name: "person_role" })-[]-(e:Emoji) 
 where e.name =~ '.*er:.*' 
-MERGE (act:Category { name: "activity" })
+MERGE (act:Category { name: "activity", synthetic: true })
 MERGE (e)-[r:IN]->(act)
 RETURN count(r);
+
+/* Colors */
+WITH ['red', 'white', 'green', 'yellow', 'black', 'brown', 'pink', 'blue', 'purple', 'black'] as colors 
+UNWIND colors as color
+match (e:Emoji) where e.name =~ '.*' + color + '.*'
+MERGE (c:Category { name: color, synthetic: true })
+MERGE (c2:Category { name: 'color' })
+MERGE (c)-[:RELATED]->(c2)
+MERGE (e)-[r:IN]->(c)
+return count(r);
