@@ -48,7 +48,7 @@ WITH [
 ] as skinToneCategories
 UNWIND skinToneCategories as skinToneCategory
 MATCH (e:Emoji)
-WHERE e.name =~ '.*: ' + skinToneCategory + '.*'
+WHERE e.name =~ ('.*: ' + skinToneCategory + '.*')
 MERGE (c:Category { name: skinToneCategory, synthetic: true })
 MERGE (e)-[r:IN]->(c)
 RETURN count(r);
@@ -60,10 +60,11 @@ MERGE (act:Category { name: "activity", synthetic: true })
 MERGE (e)-[r:IN]->(act)
 RETURN count(r);
 
+
 /* Colors */
 WITH ['red', 'white', 'green', 'yellow', 'black', 'brown', 'pink', 'blue', 'purple', 'black'] as colors 
 UNWIND colors as color
-match (e:Emoji) where e.name =~ '.*' + color + '.*'
+match (e:Emoji) where e.name =~ ('.*' + color + '.*')
 MERGE (c:Category { name: color, synthetic: true })
 MERGE (c2:Category { name: 'color' })
 MERGE (c)-[:RELATED]->(c2)
