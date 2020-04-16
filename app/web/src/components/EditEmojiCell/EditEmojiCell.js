@@ -6,7 +6,6 @@ export const QUERY = gql`
   query FIND_POST_BY_ID($id: String!) {
     emoji: emoji(id: $id) {
       id
-      column_a
       code
       browser
       name

@@ -42,7 +42,6 @@ const EmojisList = ({ emojis }) => {
         <thead>
           <tr className="bg-gray-300 text-gray-700">
             <th className="font-semibold text-left p-3">id</th>
-            <th className="font-semibold text-left p-3">column_a</th>
             <th className="font-semibold text-left p-3">code</th>
             <th className="font-semibold text-left p-3">browser</th>
             <th className="font-semibold text-left p-3">name</th>
@@ -57,7 +56,6 @@ const EmojisList = ({ emojis }) => {
               className="odd:bg-gray-100 even:bg-white border-t"
             >
               <td className="p-3">{truncate(emoji.id)}</td>
-              <td className="p-3">{truncate(emoji.column_a)}</td>
               <td className="p-3">{truncate(emoji.code)}</td>
               <td className="p-3">{truncate(emoji.browser)}</td>
               <td className="p-3">{truncate(emoji.name)}</td>

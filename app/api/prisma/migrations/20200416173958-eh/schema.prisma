@@ -1,6 +1,6 @@
 datasource DS {
   provider = "sqlite"
-  url      = env("DATABASE_URL")
+  url = "***"
 }
 
 generator client {
@@ -10,6 +10,7 @@ generator client {
 
 model Emoji {
   id        String @id @default(cuid())
+  column_a  Int
   code      String
   browser   String
   name      String

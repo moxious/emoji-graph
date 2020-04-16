@@ -35,8 +35,8 @@ const Emoji = ({ emoji }) => {
               <td className="font-semibold p-3 text-right md:w-1/5">id</td>
               <td className="p-3">{emoji.id}</td>
             </tr><tr className="odd:bg-gray-100 even:bg-white border-t">
-              <td className="font-semibold p-3 text-right md:w-1/5">column_a</td>
-              <td className="p-3">{emoji.column_a}</td>
+              {/* <td className="font-semibold p-3 text-right md:w-1/5">column_a</td> */}
+              {/* <td className="p-3">{emoji.column_a}</td> */}
             </tr><tr className="odd:bg-gray-100 even:bg-white border-t">
               <td className="font-semibold p-3 text-right md:w-1/5">code</td>
               <td className="p-3">{emoji.code}</td>

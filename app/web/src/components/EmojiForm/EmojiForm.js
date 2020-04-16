@@ -32,7 +32,7 @@ const EmojiForm = (props) => {
           listClassName="mt-2 list-disc list-inside"
         />
 
-        <Label
+        {/* <Label
           name="column_a"
           className={CSS.label}
           errorClassName={CSS.labelError}
@@ -44,7 +44,7 @@ const EmojiForm = (props) => {
           errorClassName={CSS.inputError}
           validation={{ required: true }}
         />
-        <FieldError name="column_a" className={CSS.errorMessage} />
+        <FieldError name="column_a" className={CSS.errorMessage} /> */}
 
         <Label
           name="code"

@@ -1,6 +1,9 @@
 /* eslint-disable no-console */
 const { PrismaClient } = require('@prisma/client')
 const dotenv = require('dotenv')
+const emoji = require('../../web/src/emoji.json')
+const fs = require('fs');
+const csv = require('csv-parser');
 
 dotenv.config()
 const db = new PrismaClient()
@@ -11,12 +14,24 @@ async function main() {
   // will result in the same database state (usually by checking for the
   // existence of a record before trying to create it). For example:
   //
-  //   const existing = await db.user.findMany({ where: { email: 'admin@email.com' }})
-  //   if (!existing.length) {
-  //     await db.user.create({ data: { name: 'Admin', email: 'admin@email.com' }})
-  //   }
+  const existing = await db.emoji.findMany({ first: 1 })
+    .catch(err => console.error('Locate error',err))
 
-  console.info('No data to seed. See api/prisma/seeds.js for info.')
+  const buf = emoji;
+  if (!existing.length) {
+
+    for (let i=0; i<buf.length; i++) {
+      // buf[i].column_a = Number(buf[i].column_a);
+      delete(buf[i].column_a);
+      const result = await db.emoji.create({
+        data: buf[i],
+      }).catch(err => console.error('ZOMG',buf[i],err));
+    }
+  } else {
+    console.info('No data to seed. See api/prisma/seeds.js for info.')
+  }
+
+  console.log('Done');
 }
 
 main()

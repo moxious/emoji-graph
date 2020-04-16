@@ -6,7 +6,6 @@ export const QUERY = gql`
   query POSTS {
     emojis {
       id
-      column_a
       code
       browser
       name
