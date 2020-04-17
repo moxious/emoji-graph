@@ -2,6 +2,7 @@
 const { PrismaClient } = require('@prisma/client')
 const dotenv = require('dotenv')
 const emoji = require('../../web/src/emoji.json')
+const stories = require('./seed-stories.json');
 const fs = require('fs');
 const csv = require('csv-parser');
 
@@ -14,6 +15,18 @@ async function main() {
   // will result in the same database state (usually by checking for the
   // existence of a record before trying to create it). For example:
   //
+
+  const st = await db.story.findMany({ first: 1 })
+    .catch(err => console.error('Locate error',err));
+
+  if (!st.length) {
+    for (let i=0; i<stories.length; i++) {
+      await db.story.create({
+        data: stories[i],
+      }).catch(err => console.error('ZOMG', stories[i], err));
+    }
+  }
+
   const existing = await db.emoji.findMany({ first: 1 })
     .catch(err => console.error('Locate error',err))
 
