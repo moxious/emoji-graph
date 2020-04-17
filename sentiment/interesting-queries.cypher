@@ -1,7 +1,7 @@
 MATCH (e:Emoji)
 WHERE 
     e.occurrences is not null AND
-    e.occurrences >= 100 
+    e.occurrences >= 1
 WITH e, 
  e.positive / toFloat(e.occurrences) as positiveRatio,
  e.negative / toFloat(e.occurrences) as negativeRatio
