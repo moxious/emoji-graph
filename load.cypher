@@ -7,31 +7,33 @@ CREATE INDEX ON :Category(name);
 /* Raw Category list as a starting point */
 LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/moxious/emoji-graph/master/category.csv' as line
 MERGE (c:Category { name: line.category })
+   SET c.synthetic = false
 RETURN count(c);
 
 LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/moxious/emoji-graph/master/emojis-rawcsv/all-emojis.csv' as line
 WITH line
 WHERE line.code is not null
-MERGE (e:Emoji { code: line.code })
+MERGE (e:Emoji { emoji: line.browser })
   ON CREATE SET
+    e.code = line.code,
     e.name = line.cldr_short_name,
     e.column_a = line.column_a,
-    e.browser = line.browser,
     e.rawSet = true
 MERGE (c:Category { name: toLower(line.category) })
+   SET c.synthetic = false
 MERGE (e)-[:IN]->(c)
 RETURN count(e);
 
 /* Emoji Database */
 LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/moxious/emoji-graph/master/emoji-database/emoji-database.csv' as line
-MERGE (e:Emoji { browser: line.emoji })
+MERGE (e:Emoji { emoji: line.emoji })
   SET e.altName = coalesce(line.name, ''),
       e.codepoints = line.codepoints,
       e.emojiDatabase = true
 MERGE (g:Category { name: toLower(line.group) })
-   SET g.emojiDatabase = true
+   SET g.emojiDatabase = true, g.synthetic = false
 MERGE (sg:Category { name: toLower(line.sub_group) })
-   SET g.emojiDatabase = true
+   SET sg.emojiDatabase = true, sg.synthetic = false
 MERGE (sg)-[:SIMILAR]->(g)
 MERGE (e)-[:IN]->(sg)
 RETURN count(e);
@@ -41,7 +43,7 @@ LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/moxious/emoji-grap
 AS line
 /* Headers:
    Emoji,Unicode codepoint,Occurrences,Position,Negative,Neutral,Positive,Unicode name,Unicode block */
-MERGE (e:Emoji { browser: line.Emoji })
+MERGE (e:Emoji { emoji: line.Emoji })
 SET 
     e.codepoint = line.`Unicode codepoint`,
     e.occurrences = toInteger(line.Occurrences),
@@ -52,8 +54,15 @@ SET
     e.unicodeName = toLower(line.`Unicode name`),
     e.sentiment = true
 MERGE (c:Category { name: toLower(line.`Unicode block`) })
+   SET c.synthetic = false
 MERGE (e)-[:IN]->(c)
 return count(e);
+
+/* ENSURE ALL EMOJI HAVE A NAME FIELD */
+MATCH (e:Emoji)
+WHERE e.name is null
+SET e.name = coalesce(coalesce(e.altName, e.unicodeName), '')
+RETURN count(e);
 
 /* Compute a "positive/negative" ratio of usage */
 MATCH (e:Emoji)
@@ -79,11 +88,9 @@ WITH [
 UNWIND skinToneCategories as skinToneCategory
 MATCH (e:Emoji)
 WHERE e.name =~ ('.*: ' + skinToneCategory + '.*')
-MERGE (c:Category { 
-  name: skinToneCategory, 
-  synthetic: true,
-  skinTone: true
-})
+MERGE (c:Category { name: skinToneCategory })
+  ON CREATE SET c.synthetic = true, c.skinTone = true
+  ON MATCH SET c.skinTone = true
 MERGE (e)-[r:IN]->(c)
 RETURN count(r);
 
@@ -96,22 +103,34 @@ RETURN count(r);
 
 /* workers, fire fighters, officers */
 MATCH (c:Category { name: "person_role" })-[]-(e:Emoji) 
-where e.name =~ '.*er:.*' 
-MERGE (act:Category { name: "activity", synthetic: true })
+WHERE e.name =~ '.*er:.*' 
+MERGE (act:Category { name: "activity" })
+  ON CREATE set act.synthetic = true
 MERGE (e)-[r:IN]->(act)
 RETURN count(r);
 
 /* Colors */
 WITH ['red', 'white', 'green', 'yellow', 'black', 'brown', 'pink', 'blue', 'purple', 'black'] as colors 
 UNWIND colors as color
-match (e:Emoji) where e.name =~ ('.*' + color + '.*')
-MERGE (c:Category { name: color, synthetic: true })
+WITH color, ('.*' + color + '.*') as pattern
+MATCH (e:Emoji) 
+WHERE 
+    e.name =~ pattern OR
+    e.altName =~ pattern OR
+    e.unicodeName =~ pattern
+MERGE (c:Category { name: color })
+  ON CREATE SET c.synthetic = true
 MERGE (c2:Category { name: 'color' })
+  ON CREATE SET c.synthetic = true
 MERGE (c)-[:RELATED]->(c2)
 MERGE (e)-[r:IN]->(c)
 return count(r);
 
 /* Create synthetic groupings */
+/* This causes an explosion of groupings that I'm not certain
+ * we want just yet
+ */
+/*
 WITH '[ \\(\\),:"-]+' as regex
 MATCH (e:Emoji)
 WITH e, 
@@ -125,7 +144,8 @@ WHERE
   not word in ['', 'with', 'a', 'the', 'them', 'an'] AND
   size(word) > 1 AND
   NOT word =~ '^[0-9]+'
-MERGE (c:Category { name: word })
+MERGE (c:Category { name: toLower(word) })
    ON CREATE SET c.synthetic = true
 MERGE (e)-[r:RELATED]->(c)
 RETURN count(c);
+*/
