@@ -6,7 +6,7 @@ CREATE INDEX ON :Category(name);
 
 /* Raw Category list as a starting point */
 LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/moxious/emoji-graph/master/category.csv' as line
-MERGE (c:Category { name: line.category })
+MERGE (c:Category { name: apoc.text.replace(toLower(line.category), '_', '-') })
    SET c.synthetic = false
 RETURN count(c);
 
@@ -19,7 +19,7 @@ MERGE (e:Emoji { emoji: line.browser })
     e.name = line.cldr_short_name,
     e.column_a = line.column_a,
     e.rawSet = true
-MERGE (c:Category { name: toLower(line.category) })
+MERGE (c:Category { name: apoc.text.replace(toLower(line.category), '_', '-') })
    SET c.synthetic = false
 MERGE (e)-[:IN]->(c)
 RETURN count(e);
@@ -30,9 +30,9 @@ MERGE (e:Emoji { emoji: line.emoji })
   SET e.altName = coalesce(line.name, ''),
       e.codepoints = line.codepoints,
       e.emojiDatabase = true
-MERGE (g:Category { name: toLower(line.group) })
+MERGE (g:Category { name: apoc.text.replace(toLower(line.group), '_', '-') })
    SET g.emojiDatabase = true, g.synthetic = false
-MERGE (sg:Category { name: toLower(line.sub_group) })
+MERGE (sg:Category { name: apoc.text.replace(toLower(line.sub_group), '_', '-') })
    SET sg.emojiDatabase = true, sg.synthetic = false
 MERGE (sg)-[:SIMILAR]->(g)
 MERGE (e)-[:IN]->(sg)
@@ -53,7 +53,7 @@ SET
     e.positive = toInteger(line.Positive),
     e.unicodeName = toLower(line.`Unicode name`),
     e.sentiment = true
-MERGE (c:Category { name: toLower(line.`Unicode block`) })
+MERGE (c:Category { name: apoc.text.replace(toLower(line.`Unicode block`), '_', '-') })
    SET c.synthetic = false
 MERGE (e)-[:IN]->(c)
 return count(e);
@@ -88,7 +88,7 @@ WITH [
 UNWIND skinToneCategories as skinToneCategory
 MATCH (e:Emoji)
 WHERE e.name =~ ('.*: ' + skinToneCategory + '.*')
-MERGE (c:Category { name: skinToneCategory })
+MERGE (c:Category { name: apoc.text.replace(toLower(skinToneCategory), '_', '-') })
   ON CREATE SET c.synthetic = true, c.skinTone = true
   ON MATCH SET c.skinTone = true
 MERGE (e)-[r:IN]->(c)
@@ -96,13 +96,13 @@ RETURN count(r);
 
 /* Category Similarity */
 LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/moxious/emoji-graph/master/similar.csv' as line
-MERGE (a:Category { name: toLower(line.categoryA) })
-MERGE (b:Category { name: toLower(line.categoryB) })
+MERGE (a:Category { name: apoc.text.replace(toLower(line.categoryA), '_', '-') })
+MERGE (b:Category { name: apoc.text.replace(toLower(line.categoryB), '_', '-') })
 MERGE (a)-[r:SIMILAR]->(b)
 RETURN count(r);
 
 /* workers, fire fighters, officers */
-MATCH (c:Category { name: "person_role" })-[]-(e:Emoji) 
+MATCH (c:Category { name: "person-role" })-[]-(e:Emoji) 
 WHERE e.name =~ '.*er:.*' 
 MERGE (act:Category { name: "activity" })
   ON CREATE set act.synthetic = true
@@ -110,6 +110,7 @@ MERGE (e)-[r:IN]->(act)
 RETURN count(r);
 
 /* Colors */
+/* Causing too many problematic matches right now.
 WITH ['red', 'white', 'green', 'yellow', 'black', 'brown', 'pink', 'blue', 'purple', 'black'] as colors 
 UNWIND colors as color
 WITH color, ('.*' + color + '.*') as pattern
@@ -125,6 +126,7 @@ MERGE (c2:Category { name: 'color' })
 MERGE (c)-[:RELATED]->(c2)
 MERGE (e)-[r:IN]->(c)
 return count(r);
+*/
 
 /* Create synthetic groupings */
 /* This causes an explosion of groupings that I'm not certain
