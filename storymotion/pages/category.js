@@ -20,7 +20,7 @@ const Category = (props) => {
 
 Category.getInitialProps = async function () {
     const skip = 0; 
-    const limit = 100;
+    const limit = 20;
 
     const res = await api.getCategories(skip, limit);
     const data = await res.json();

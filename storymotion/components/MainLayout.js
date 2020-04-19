@@ -26,6 +26,12 @@ const MainLayout = ({ children }) => (
                     <a>Categories</a>
                 </Link>
             </Menu.Item>
+
+            <Menu.Item name='search'>
+                <Link href="/search/">
+                    <a>Search</a>
+                </Link>
+            </Menu.Item>
         </Menu>
 
         <div className='MainContent'>{children}</div>

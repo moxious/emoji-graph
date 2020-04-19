@@ -12,6 +12,8 @@ const getEmojiByCategory = async (category) => apiCall(endpoint + `category/${ca
 const getRelatedCategories = async(category) => apiCall(endpoint + `category/related/${category}`);
 const getSimilarEmoji = async(emoji) => apiCall(endpoint + `similar/${emoji}`);
 const getEmoji = async(emoji) => apiCall(endpoint + `emoji/${emoji}`);
+const searchEmoji = async(text) => apiCall(endpoint + `search/emoji/${text}`);
+const searchCategories = async(text) => apiCall(endpoint + `search/category/${text}`);
 
 export default {
     endpoint,
@@ -20,5 +22,7 @@ export default {
     getRelatedCategories,
     getSimilarEmoji,
     getEmoji,
-    apiCall,    
+    apiCall,
+    searchEmoji,
+    searchCategories,
 };
