@@ -4,6 +4,7 @@ import EmojiList from '../../components/EmojiList';
 import CategoryList from '../../components/CategoryList';
 import api from '../../api';
 import { Grid } from 'semantic-ui-react'
+import _ from 'lodash';
 
 const EmptyList = () =>
   <div className='EmptyList'>

@@ -3,8 +3,8 @@ import { Icon } from 'semantic-ui-react';
 
 export default ({ category, children }) => 
     <Link href="/category/[name]" as={`/category/${category}`}>
-        <div>
+        <span>
             <Icon name='cube' />
             <a>{children}</a>
-        </div>
+        </span>
     </Link>;

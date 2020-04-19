@@ -1,16 +1,15 @@
 import MainLayout from '../../components/MainLayout';
-import Header from '../../components/Header';
 import EmojiDetail from '../../components/Emoji';
 import { useRouter } from 'next/router';
-import Link from 'next/link';
 import api from '../../api/';
+import { Header } from 'semantic-ui-react';
 
 const Emoji = ({ emoji, data }) => {
     const router = useRouter();
 
     return (
         <MainLayout>
-            <h1>Emoji Details: {emoji}</h1>
+            <Header size='huge'>{emoji}</Header>
 
             <EmojiDetail data={data} full={true}/>
         </MainLayout>

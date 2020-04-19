@@ -61,6 +61,10 @@ class CategoryList extends React.Component {
 
     renderItems() {
         if (this.state.items) {
+            if (this.state.items.length === 0) {
+                return <p>Nothing to show!</p>;
+            }
+
             return (
                 <List className='CategoryList'>
                     {

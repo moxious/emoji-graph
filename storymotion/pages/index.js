@@ -1,5 +1,6 @@
 import MainLayout from '../components/MainLayout';
 import EmojiLink from '../components/EmojiLink';
+import CategoryLink from '../components/CategoryLink';
 
 const Index = (props) => {
     return (
@@ -10,7 +11,7 @@ const Index = (props) => {
               paddingTop: '40px',
               fontSize: '100px',
               paddingBottom: '40px',
-            }}>😂</div>
+            }}><EmojiLink emoji='face with tears of joy'>😂</EmojiLink></div>
 
             <h2>Getting Started</h2>
 
@@ -20,6 +21,11 @@ const Index = (props) => {
             <EmojiLink emoji='grinning cat face'>😺 grin</EmojiLink> on your face!</p>
 
             <p>We also have many categories, such as 
+                <CategoryLink category='sport'>sport ⚽</CategoryLink>, 
+                <CategoryLink category='person-activity'>activities 🕺🏿</CategoryLink>,
+                <CategoryLink category='family'>families 👩‍❤‍👨</CategoryLink>,
+                <CategoryLink category='hands'>hands 👏</CategoryLink>,
+                and even <CategoryLink category='food-fruit'>fruit 🍌</CategoryLink>!
 
             </p>
         </MainLayout>
