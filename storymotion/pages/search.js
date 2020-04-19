@@ -31,13 +31,12 @@ class SearchForm extends React.Component {
 
         if (this.state.searchType === 'emoji') {
             console.log('search emoji');
-            res = await api.searchEmoji(this.state.text);
+            res = await api.searchEmoji('*' + this.state.text + '*');
         } else {
             console.log('search categories');
             res = await api.searchCategories(this.state.text);
         }
 
-        console.log('result',res);
         return res.json()
             .then(data => {
                 console.log('SEARCH RESULTS', data);
@@ -51,7 +50,7 @@ class SearchForm extends React.Component {
         if (this.state.text && this.state.searchType) {
             return this.search();
         }
-    }, 100);
+    }, 200);
 
     onTypeChange = _.debounce((event, data) => {
         this.setState({ searchType: data.value });
@@ -59,7 +58,7 @@ class SearchForm extends React.Component {
         if (this.state.text && this.state.searchType) {
             return this.search();
         }
-    });
+    }, 200);
 
     render() {
         return (
@@ -90,14 +89,23 @@ class SearchForm extends React.Component {
     }
 }
 
-const SearchResults = ({ results }) => 
-    <div className='SearchResults'>
-        {
-            results[0] && results[0].emoji ? 
-            <EmojiList emojis={results} /> :
-            <CategoryList categories={results.map(r => r.name)} />
-        }
-    </div>;
+const SearchResults = ({ results }) => {
+    if (!results || results.length === 0) {
+        return <div className='SearchResults'>
+            <h3>No search results.  Try another term</h3>
+        </div>
+    };
+
+    return (
+        <div className='SearchResults'>
+            {
+                results[0] && results[0].emoji ? 
+                <EmojiList emojis={results} /> :
+                <CategoryList categories={results.map(r => r.name)} />
+            }
+        </div>
+    );
+};
 
 export default function Search() {
     return (

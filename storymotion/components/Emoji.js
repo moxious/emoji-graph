@@ -1,4 +1,4 @@
-import { Container, Header, Icon, Card } from 'semantic-ui-react'
+import { Container, Grid, Header, Icon, Card } from 'semantic-ui-react'
 import Link from 'next/link';
 import _ from 'lodash';
 import CategoryList from './CategoryList';
@@ -12,7 +12,7 @@ const Details = ({ data }) =>
 
         {data.sentiment ? <Sentiment data={data} /> : ''}
 
-        <h3>Related Categories</h3>
+        <h2>Related Categories</h2>
         <CategoryList categories={
             _.sortBy(_.uniq((data.categories || []).concat((data.relatedCategories || []))))
         } />
@@ -75,15 +75,28 @@ const Sentiment = ({ data }) => {
 const Emoji = ({ data, full }) =>
     <Card className='Emoji'>
         <Card.Content>
-            <Card.Header size='huge'>
+            <Card.Header>
                 <Link href="/emoji/[emoji]" as={`/emoji/${data.name}`}>
                     <a>{data.emoji}</a>
                 </Link>
             </Card.Header>
 
-            <Link href="/emoji/[emoji]" as={`/emoji/${data.name}`}>
+            <Grid columns={2} divided>
+                <Grid.Row>
+                    <Grid.Column>
+                    <Link href="/emoji/[emoji]" as={`/emoji/${data.name}`}>
                 <a>{data.name}</a>
             </Link>
+
+                    </Grid.Column>
+                    <Grid.Column>
+                    <Link href="/similar/[emoji]" as={`/similar/${data.name}`}>
+                <a><em>find similar 👉</em></a>
+            </Link>
+
+                    </Grid.Column>
+                </Grid.Row>
+            </Grid>
 
             {full ? <Details data={data} /> : ''}
         </Card.Content>

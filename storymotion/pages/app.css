@@ -9,9 +9,12 @@ div.MainContent {
     padding-right: 20px;
 }
 
-div.ui.container.Emoji {
-    border-width: 2px;
-    border-color: coral;
+div.ui.card.Emoji {
     padding-top: 15px;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
+}
+
+div.ui.card.Emoji > div.content > div.header {
+    font-size: 40px !important;
+    text-align: center;
 }

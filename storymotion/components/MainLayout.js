@@ -14,13 +14,6 @@ const MainLayout = ({ children }) => (
                 </Link>
             </Menu.Item>
 
-            <Menu.Item name='about'>
-                <Link href="/about">
-                    <a>About</a>
-                </Link>
-
-            </Menu.Item>
-
             <Menu.Item name='categories'>
                 <Link href="/category/">
                     <a>Categories</a>

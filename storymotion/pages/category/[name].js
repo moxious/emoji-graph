@@ -29,7 +29,7 @@ const Category = (props) => {
           </Grid.Column>
           <Grid.Column>
             <h2>Related Categories</h2>
-            <CategoryList categories={props.related.map(r => r.name)} />
+            <CategoryList categories={_.sortBy(_.uniq(props.related.map(r => r.name)))} />
           </Grid.Column>
         </Grid.Row>
       </Grid>
