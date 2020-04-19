@@ -1,6 +1,6 @@
 import MainLayout from '../components/MainLayout';
 import React from 'react';
-import { Form, Dropdown, Loader } from 'semantic-ui-react'
+import { Form, Dropdown, Loader, Header } from 'semantic-ui-react'
 import EmojiList from '../components/EmojiList';
 import CategoryList from '../components/CategoryList';
 import api from '../api';
@@ -31,10 +31,10 @@ class SearchForm extends React.Component {
 
         if (this.state.searchType === 'emoji') {
             console.log('search emoji');
-            res = await api.searchEmoji('*' + this.state.text + '*');
+            res = await api.searchEmoji(this.state.text + '*');
         } else {
             console.log('search categories');
-            res = await api.searchCategories(this.state.text);
+            res = await api.searchCategories(this.state.text + '*');
         }
 
         return res.json()
@@ -110,7 +110,7 @@ const SearchResults = ({ results }) => {
 export default function Search() {
     return (
         <MainLayout>
-            <h1>Search</h1>
+            <Header size='huge'>Search</Header>
 
             <SearchForm />
         </MainLayout>

@@ -3,7 +3,7 @@ import MainLayout from '../../components/MainLayout';
 import EmojiList from '../../components/EmojiList';
 import CategoryList from '../../components/CategoryList';
 import api from '../../api';
-import { Grid } from 'semantic-ui-react'
+import { Grid, Header } from 'semantic-ui-react'
 import _ from 'lodash';
 
 const EmptyList = () =>
@@ -17,7 +17,7 @@ const Category = (props) => {
 
   return (
     <MainLayout>
-      <h1>Category: {props.name}</h1>
+      <Header size='huge'>Category {props.name}</Header>
 
       <Grid columns={2} divided>
         <Grid.Row>

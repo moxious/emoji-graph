@@ -1,11 +1,12 @@
 import MainLayout from '../components/MainLayout';
 import EmojiLink from '../components/EmojiLink';
 import CategoryLink from '../components/CategoryLink';
+import { Header } from 'semantic-ui-react';
 
 const Index = (props) => {
     return (
         <MainLayout>
-            <h1>Storymotion</h1>
+            <Header size='huge'>Storymotion</Header>
 
             <div style={{
               paddingTop: '40px',

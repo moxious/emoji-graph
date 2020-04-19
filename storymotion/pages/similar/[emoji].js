@@ -2,13 +2,14 @@ import MainLayout from '../../components/MainLayout';
 import EmojiList from '../../components/EmojiList';
 import { useRouter } from 'next/router';
 import api from '../../api/';
+import { Header } from 'semantic-ui-react';
 
 const Similar = ({ emoji, similar }) => {
     const router = useRouter();
 
     return (
         <MainLayout>
-            <h1>Similar Emoji: {emoji}</h1>
+            <Header size='huge'>Similar to: {emoji}</Header>
 
             <EmojiList emojis={similar}/>
         </MainLayout>
