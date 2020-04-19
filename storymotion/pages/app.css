@@ -1,0 +1,17 @@
+div.MainLayout {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+div.MainContent {
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+div.ui.container.Emoji {
+    border-width: 2px;
+    border-color: coral;
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
