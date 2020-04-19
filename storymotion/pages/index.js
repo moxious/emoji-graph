@@ -1,16 +1,27 @@
-import Header from '../components/Header';
 import MainLayout from '../components/MainLayout';
+import EmojiLink from '../components/EmojiLink';
 
 const Index = (props) => {
     return (
         <MainLayout>
-            <p>Hello Next.js</p>
-            {/* <h1>Batman TV Shows</h1>
-            <ul>
-              {props.shows.map(show => (
-                <li key={show.id}>{show.id}</li>
-              ))}
-            </ul>             */}
+            <h1>Storymotion</h1>
+
+            <div style={{
+              paddingTop: '40px',
+              fontSize: '100px',
+              paddingBottom: '40px',
+            }}>😂</div>
+
+            <h2>Getting Started</h2>
+
+            <p>Welcome!  You can
+            <EmojiLink emoji='magnifying glass tilted right'>🔎 explore</EmojiLink>, 
+            play some <EmojiLink emoji='game die'>🎲 games</EmojiLink>, and get a nice
+            <EmojiLink emoji='grinning cat face'>😺 grin</EmojiLink> on your face!</p>
+
+            <p>We also have many categories, such as 
+
+            </p>
         </MainLayout>
     );
 };

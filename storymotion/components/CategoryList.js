@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Icon, List, Pagination } from 'semantic-ui-react'
+import CategoryLink from './CategoryLink';
 
 const CategoryList = ({ categories }) => (
     <div className='CategoryList'>
@@ -16,11 +17,8 @@ const CategoryList = ({ categories }) => (
             {
                 categories.map((c, i) =>
                     <List.Item key={i}>
-                        <List.Icon name='cube' />
                         <List.Content>
-                            <Link href="/category/[name]" as={`/category/${c}`}>
-                                <a>{c}</a>
-                            </Link>
+                            <CategoryLink category={c}>{c}</CategoryLink>
                         </List.Content>
                     </List.Item>)
             }
