@@ -10,7 +10,7 @@ const Games = ({ emoji, data }) => {
 
     return (
         <MainLayout>
-            <Grid columns={2} separated>
+            <Grid columns={2} divided>
                 <Grid.Row>
                     <Grid.Column>
                         <NewGame />
