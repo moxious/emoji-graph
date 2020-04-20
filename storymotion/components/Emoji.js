@@ -84,15 +84,15 @@ const Emoji = ({ data, full }) =>
             <Grid columns={2} divided>
                 <Grid.Row>
                     <Grid.Column>
-                    <Link href="/emoji/[emoji]" as={`/emoji/${data.name}`}>
-                <a>{data.name}</a>
-            </Link>
+                        <Link href="/emoji/[emoji]" as={`/emoji/${data.name}`}>
+                            <a>{data.name}</a>
+                        </Link>
 
                     </Grid.Column>
                     <Grid.Column>
-                    <Link href="/similar/[emoji]" as={`/similar/${data.name}`}>
-                <a><em>find similar 👉</em></a>
-            </Link>
+                        <Link href="/similar/[emoji]" as={`/similar/${data.name}`}>
+                            <a><em>find similar 👉</em></a>
+                        </Link>
 
                     </Grid.Column>
                 </Grid.Row>

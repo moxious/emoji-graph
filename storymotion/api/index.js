@@ -7,16 +7,28 @@ const apiCall = (endpoint) => {
     return fetch(endpoint);
 };
 
-const getCategories = async (skip=0, limit=20) => apiCall(endpoint + `category?skip=${skip}&limit=${limit}`);
+const translate = async (text) =>
+    fetch(endpoint + 'translate', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ text }),
+    });
+
+const getMatrix = async (x = 3, y = 3) => apiCall(endpoint + `matrix?x=${x}&y=${y}`);
+const getCategories = async (skip = 0, limit = 20) => apiCall(endpoint + `category?skip=${skip}&limit=${limit}`);
 const getEmojiByCategory = async (category) => apiCall(endpoint + `category/${category}`);
-const getRelatedCategories = async(category) => apiCall(endpoint + `category/related/${category}`);
-const getSimilarEmoji = async(emoji) => apiCall(endpoint + `similar/${emoji}`);
-const getEmoji = async(emoji) => apiCall(endpoint + `emoji/${emoji}`);
-const searchEmoji = async(text) => apiCall(endpoint + `search/emoji/${text}`);
-const searchCategories = async(text) => apiCall(endpoint + `search/category/${text}`);
+const getRelatedCategories = async (category) => apiCall(endpoint + `category/related/${category}`);
+const getSimilarEmoji = async (emoji) => apiCall(endpoint + `similar/${emoji}`);
+const getEmoji = async (emoji) => apiCall(endpoint + `emoji/${emoji}`);
+const searchEmoji = async (text) => apiCall(endpoint + `search/emoji/${text}`);
+const searchCategories = async (text) => apiCall(endpoint + `search/category/${text}`);
 
 export default {
     endpoint,
+    translate,
+    getMatrix,
     getCategories,
     getEmojiByCategory,
     getRelatedCategories,
