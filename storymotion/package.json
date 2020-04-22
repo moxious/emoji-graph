@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "@auth0/auth0-spa-js": "^1.7.0",
+    "auth0-lock": "^11.23.1",
     "isomorphic-unfetch": "^3.0.0",
     "lodash": "^4.17.15",
     "moment": "^2.24.0",

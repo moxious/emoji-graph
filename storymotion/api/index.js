@@ -1,18 +1,18 @@
 import fetch from 'isomorphic-unfetch';
 
 const endpoint = 'https://d9dzj96r0k.execute-api.us-east-1.amazonaws.com/basic/';
+const json = () => ({ 'Content-Type': 'application/json', });
+const authorization = () => ({ Authorization: `Bearer ${localStorage.getItem('id_token')}` });
 
-const apiCall = (endpoint) => {
+const apiCall = (endpoint, options = null) => {
     console.log('API call', endpoint);
-    return fetch(endpoint);
+    return fetch(endpoint, options);
 };
 
 const translate = async (text) =>
     fetch(endpoint + 'translate', {
         method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
+        headers: jsonContent,
         body: JSON.stringify({ text }),
     });
 
@@ -24,6 +24,25 @@ const getSimilarEmoji = async (emoji) => apiCall(endpoint + `similar/${emoji}`);
 const getEmoji = async (emoji) => apiCall(endpoint + `emoji/${emoji}`);
 const searchEmoji = async (text) => apiCall(endpoint + `search/emoji/${text}`);
 const searchCategories = async (text) => apiCall(endpoint + `search/category/${text}`);
+
+const user = async (user) =>
+    fetch(endpoint + 'user', {
+        method: 'POST',
+        headers: _.merge(authorization(), json()),
+        body: JSON.stringify({ user }),
+    });
+
+const hello = () => {
+    const token = localStorage.getItem('id_token');
+    if (!token) {
+        return Promise.reject('Private API calls not allowed while unauthenticated');
+    }
+
+    return apiCall(endpoint + 'hello', {
+        method: 'POST',
+        headers: _.merge(authorization(), json()),
+    });
+};
 
 export default {
     endpoint,
@@ -37,4 +56,8 @@ export default {
     apiCall,
     searchEmoji,
     searchCategories,
+    private: {
+        hello,
+        user,
+    },
 };
