@@ -12,8 +12,15 @@ const apiCall = (endpoint, options = null) => {
 const translate = async (text) =>
     fetch(endpoint + 'translate', {
         method: 'POST',
-        headers: jsonContent,
+        headers: json(),
         body: JSON.stringify({ text }),
+    });
+
+const submitStory = async (data) =>
+    fetch(endpoint + 'story', {
+        method: 'POST',
+        headers: _.merge(json(), authorization()),
+        body: JSON.stringify(data),
     });
 
 const getMatrix = async (x = 3, y = 3) => apiCall(endpoint + `matrix?x=${x}&y=${y}`);
@@ -46,6 +53,7 @@ const hello = () => {
 
 export default {
     endpoint,
+    scope: 'actions:*',
     translate,
     getMatrix,
     getCategories,
@@ -59,5 +67,6 @@ export default {
     private: {
         hello,
         user,
+        submitStory,
     },
 };
