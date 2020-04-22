@@ -21,7 +21,7 @@ const Index = (props) => {
             play some <EmojiLink emoji='game die'>🎲 games</EmojiLink>, and get a nice
             <EmojiLink emoji='grinning cat face'>😺 grin</EmojiLink> on your face!</p>
 
-            <p>We also have many categories, such as 
+            <p>We also have many categories, such as&nbsp;
                 <CategoryLink category='sport'>sport ⚽</CategoryLink>, 
                 <CategoryLink category='person-activity'>activities 🕺🏿</CategoryLink>,
                 <CategoryLink category='family'>families 👩‍❤‍👨</CategoryLink>,
