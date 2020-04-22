@@ -5,21 +5,35 @@ import { Grid } from 'semantic-ui-react';
 import Translate from '../components/Translate';
 import React from 'react';
 import api from '../api/';
+import useSWR from 'swr'
+import { withAuth } from 'use-auth0-hooks';
 
-class F extends React.Component {
-    state = { data: null };
+const F = withAuth(({ auth }) => {
+    console.log('AUTH',auth);
 
-    componentDidMount() {
-        return api.private.hello()
-            .then(r => r.json())
-            .then(data => this.setState({ data }))
-            .catch(err => console.error('F component', err));
-    }
+    if (auth.isAuthenticated) {
+        const { data, error } = useSWR('hello', async () => {
+            console.log("hello");
+            const v = await api.private.hello();
+            console.log("v",v);
+            const json = await v.json();
+            console.log("json",json);
+            return json;
+        });
 
-    render() {
-        return <pre>{JSON.stringify(this.state.data, null, 2)}</pre>
-    }
-}
+        if (error) {
+            console.log('Error',error);
+            return <div>Failed to load {`${error}`}</div>
+        } else {
+            console.log('data',data);
+        }
+
+        return <pre>{JSON.stringify(data ? data : {loading:true}, null, 2)}</pre>
+    } 
+
+    
+    return <pre>F: Not authenticated</pre>;
+});
 
 const Games = ({ emoji, data }) => {
     const router = useRouter();
