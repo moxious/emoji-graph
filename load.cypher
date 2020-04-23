@@ -77,8 +77,18 @@ SET
   e.neutralRatio = neutralRatio
 RETURN count(e);
 
-/* Emoji synonyms */
+/* Emoji synonyms: guarantee the field is present */
 MATCH (e:Emoji) SET e.synonyms = '' RETURN count(e);
+
+/* Load any custom synonyms.
+ * These facilitate "emoji translation" when the name of the 
+ * emoji is not suitable to match it to an actual english word.
+ */
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/moxious/emoji-graph/master/synonyms.csv'
+AS line
+MATCH (e:Emoji { name: line.name })
+  SET e.syonyms = line.synonms
+RETURN count(e);
 
 /* Special case categories */
 WITH [
