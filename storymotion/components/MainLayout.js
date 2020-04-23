@@ -2,82 +2,41 @@ import Link from 'next/link';
 import { Menu } from 'semantic-ui-react'
 import React from 'react';
 import _ from 'lodash';
-import { useAuth, withAuth } from 'use-auth0-hooks';
+import { useAuth } from 'use-auth0-hooks';
 import { Auth0Lock } from 'auth0-lock';
 import auth0 from '../components/auth0';
-import api from '../api';
 let activeItem = 'home';
 
-class LocalStorageAuthHelper extends React.Component {
-    state = { lock: null, fresh: 0 };
+const Authd = ({ lock, profile }) => {
+    const auth = useAuth();
 
-    componentDidMount() {
-        // Access to local storage is only permitted here, not in render or componentWillMount
-        const config = auth0();
-        const tok = localStorage.getItem('id_token');
+    const doLogin = () => {
+        return lock.show();
+    };
 
-        if (!tok) {
-            const lock = new Auth0Lock(config.AUTH0_CLIENT_ID, config.AUTH0_DOMAIN, {
-                auth: {
-                    params: {
-                        scope: 'openid email',
-                    },
-                    responseType: 'token id_token',
-                },
-            });
+    const doLogout = () => {
+        lock.logout();
+        localStorage.removeItem('accessToken');
+        localStorage.removeItem('id_token');
+        localStorage.removeItem('profile');
+    };
 
-            lock.on('authenticated', (authResult) => {
-                console.log(authResult);
-                lock.getUserInfo(authResult.accessToken, (error, profile) => {
-                    if (error) {
-                        console.error('Error on getting lock user info', error);
-                        return;
-                    }
-
-                    console.log('Lock authenticated');
-
-                    localStorage.setItem('accessToken', authResult.accessToken);
-                    localStorage.setItem('id_token', authResult.idToken);
-                    localStorage.setItem('profile', JSON.stringify(profile));
-
-                    return this.setState({ fresh: 1 });
-                });
-            });
-
-            this.setState({ lock });
-        }
-
-        return api.private.user(this.props.details.user)
-            .then(resp => resp.json())
-            .then(apiResults => console.log('User API Result', apiResults))
-            .catch(err => { console.error('ZOMG', err); });
-    }
-
-    render() {
-        return (<span>&nbsp;</span>);
-    }
-}
-
-const Authd = withAuth(({ auth }) => {
-    const { isAuthenticated, isLoading, accessToken, login, logout } = useAuth();
-
-    if (!isAuthenticated) {
+    if (!profile) {
         return (
-            <Menu.Item name='login' onClick={() => login({ appState: { returnTo: 'http://localhost:3000/' } })}>
+            <Menu.Item name='login' onClick={doLogin}>
                 Log in
             </Menu.Item>
         )
     } else {
-        console.log('Logged in', auth);
+        console.log('Logged in', profile);
         return (
-            <Menu.Item name='logout' onClick={() => logout({ appState: { returnTo: 'http://localhost:3000/' } })}>
-                {auth && auth.user && auth.user.picture ? <img src={auth.user.picture} /> : auth.user.name}
+            <Menu.Item name='logout' onClick={doLogout}>
+                {profile && profile.picture ? <img src={profile.picture} /> : profile.name}
                 &nbsp; Logout
-                <LocalStorageAuthHelper details={auth}/>
             </Menu.Item>
         )
     }
-});
+};
 
 class MainLayout extends React.Component {
     state = {
@@ -87,7 +46,56 @@ class MainLayout extends React.Component {
             { name: 'games', link: "/games", title: 'Games' },
             { name: 'category', link: "/category", title: 'Categories' },
         ],
+        lock: null,
     };
+
+    componentDidMount() {
+        const lock = new Auth0Lock(auth0().AUTH0_CLIENT_ID, auth0().AUTH0_DOMAIN, {
+            auth: {
+                params: {
+                    scope: 'openid profile email',
+                },
+                responseType: 'token id_token',
+            },
+        });
+
+        lock.on('unrecoverable_error', error => {
+            lock.show({
+                flashMessage: {
+                  type: 'error',
+                  text: error.errorDescription
+                }
+              }); 
+        })
+
+        lock.on('authorization_error', function(error) {
+            lock.show({
+              flashMessage: {
+                type: 'error',
+                text: error.errorDescription
+              }
+            });
+          });
+
+        lock.on('authenticated', (authResult) => {
+            console.log('Lock authenticated', authResult);
+            localStorage.setItem('accessToken', authResult.accessToken);
+            localStorage.setItem('id_token', authResult.idToken);
+        
+            lock.getUserInfo(authResult.accessToken, (error, profile) => {
+                if (error) {
+                    console.error('Error on getting lock user info', error);
+                    return;
+                }
+
+                console.log('Lock user info', profile);
+                localStorage.setItem('profile', JSON.stringify(profile));
+                this.setState({ profile });
+            });
+        });
+
+        return this.setState({ lock });
+    }
 
     handleItemClick = (name) => {
         console.log('set active', name);
@@ -113,7 +121,7 @@ class MainLayout extends React.Component {
                             );
                         })
                     }
-                    <Authd />
+                    <Authd lock={this.state.lock} profile={this.state.profile}/>
                 </Menu>
 
                 <div className='MainContent'>{this.props.children}</div>
