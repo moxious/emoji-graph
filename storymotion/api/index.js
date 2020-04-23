@@ -1,9 +1,18 @@
 import fetch from 'isomorphic-unfetch';
 import auth0 from '../components/auth0';
+import _ from 'lodash';
 
 const endpoint = auth0().API;
+let credentials = {};
+
+const setCredentials = creds => {
+    credentials = creds;
+};
+
+const hasCredentials = () => !_.isNil(credentials.idToken);
+
 const json = () => ({ 'Content-Type': 'application/json', });
-const authorization = () => ({ Authorization: `Bearer ${localStorage.getItem('id_token')}` });
+const authorization = () => ({ Authorization: `Bearer ${credentials.idToken}` });
 
 const apiCall = (endpoint, options = null) => {
     console.log('API call', endpoint);
@@ -65,6 +74,8 @@ export default {
     apiCall,
     searchEmoji,
     searchCategories,
+    setCredentials,
+    hasCredentials,
     private: {
         hello,
         user,

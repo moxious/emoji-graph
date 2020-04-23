@@ -5,6 +5,7 @@ import _ from 'lodash';
 import { useAuth } from 'use-auth0-hooks';
 import { Auth0Lock } from 'auth0-lock';
 import auth0 from '../components/auth0';
+import api from '../api';
 let activeItem = 'home';
 
 const Authd = ({ lock, profile }) => {
@@ -16,6 +17,7 @@ const Authd = ({ lock, profile }) => {
 
     const doLogout = () => {
         lock.logout();
+        api.setCredentials({});
         localStorage.removeItem('accessToken');
         localStorage.removeItem('id_token');
         localStorage.removeItem('profile');
@@ -81,6 +83,7 @@ class MainLayout extends React.Component {
             console.log('Lock authenticated', authResult);
             localStorage.setItem('accessToken', authResult.accessToken);
             localStorage.setItem('id_token', authResult.idToken);
+            api.setCredentials(authResult);
         
             lock.getUserInfo(authResult.accessToken, (error, profile) => {
                 if (error) {

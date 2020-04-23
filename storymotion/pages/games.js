@@ -6,12 +6,9 @@ import Translate from '../components/Translate';
 import React from 'react';
 import api from '../api/';
 import useSWR from 'swr'
-import { withAuth } from 'use-auth0-hooks';
 
-const F = withAuth(({ auth }) => {
-    console.log('AUTH',auth);
-
-    if (auth.isAuthenticated) {
+const F = () => {
+    if (api.hasCredentials()) {
         const { data, error } = useSWR('hello', async () => {
             console.log("hello");
             const v = await api.private.hello();
@@ -30,10 +27,9 @@ const F = withAuth(({ auth }) => {
 
         return <pre>{JSON.stringify(data ? data : {loading:true}, null, 2)}</pre>
     } 
-
     
     return <pre>F: Not authenticated</pre>;
-});
+};
 
 const Games = ({ emoji, data }) => {
     const router = useRouter();
