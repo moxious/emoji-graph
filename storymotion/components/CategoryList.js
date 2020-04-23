@@ -35,7 +35,6 @@ class CategoryList extends React.Component {
         this.setState({ activePage, pending: true, items: null });
 
         return api.getCategories(skip, this.state.pageSize)
-            .then(res => res.json())
             .then(items => {
                 this.setState({ items });
             })

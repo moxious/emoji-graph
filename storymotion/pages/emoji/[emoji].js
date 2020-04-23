@@ -18,8 +18,7 @@ const Emoji = ({ emoji, data }) => {
 
 Emoji.getInitialProps = async function (context) {
     const emoji = context.query.emoji;
-    const res = await api.getEmoji(emoji);
-    const data = await res.json();
+    const data = await api.getEmoji(emoji);
     // console.log(data);
     return { emoji, data: data[0] };
 };

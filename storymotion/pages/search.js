@@ -20,7 +20,7 @@ class SearchForm extends React.Component {
     }
 
     search = async () => {
-        let res;
+        let data;
 
         if (!this.state.text || !this.state.searchType) {
             console.log('Skipping search');
@@ -31,17 +31,14 @@ class SearchForm extends React.Component {
 
         if (this.state.searchType === 'emoji') {
             console.log('search emoji');
-            res = await api.searchEmoji(this.state.text + '*');
+            data = await api.searchEmoji(this.state.text + '*');
         } else {
             console.log('search categories');
-            res = await api.searchCategories(this.state.text + '*');
+            data = await api.searchCategories(this.state.text + '*');
         }
 
-        return res.json()
-            .then(data => {
-                console.log('SEARCH RESULTS', data);
-                return this.setState({ results: data, pending: false });
-            });
+        console.log('SEARCH RESULTS', data);
+        return this.setState({ results: data, pending: false });
     }
 
     onSearchChange = _.debounce((event, data) => {
@@ -63,27 +60,27 @@ class SearchForm extends React.Component {
     render() {
         return (
             <div className='SearchForm'>
-            <Form>
-                <Form.Group inline={true}>
-                    <Form.Field>
-                        <Form.Input 
-                            onChange={this.onSearchChange}
-                            placeholder='search term' />
-                    </Form.Field>
-                    <Form.Field>
-                        <Dropdown defaultValue='emoji'
-                            onChange={this.onTypeChange}
-                            search selection options={searchTypes} />
-                    </Form.Field>
-                </Form.Group>
-            </Form>
+                <Form>
+                    <Form.Group inline={true}>
+                        <Form.Field>
+                            <Form.Input
+                                onChange={this.onSearchChange}
+                                placeholder='search term' />
+                        </Form.Field>
+                        <Form.Field>
+                            <Dropdown defaultValue='emoji'
+                                onChange={this.onTypeChange}
+                                search selection options={searchTypes} />
+                        </Form.Field>
+                    </Form.Group>
+                </Form>
 
-            { 
-                this.state.pending ? <Loader /> : 
-                (this.state.results ?
-                    <SearchResults results={this.state.results} /> : 
-                    '' )
-            }
+                {
+                    this.state.pending ? <Loader /> :
+                        (this.state.results ?
+                            <SearchResults results={this.state.results} /> :
+                            '')
+                }
             </div>
         );
     }
@@ -99,9 +96,9 @@ const SearchResults = ({ results }) => {
     return (
         <div className='SearchResults'>
             {
-                results[0] && results[0].emoji ? 
-                <EmojiList emojis={results} /> :
-                <CategoryList categories={results.map(r => r.name)} />
+                results[0] && results[0].emoji ?
+                    <EmojiList emojis={results} /> :
+                    <CategoryList categories={results.map(r => r.name)} />
             }
         </div>
     );

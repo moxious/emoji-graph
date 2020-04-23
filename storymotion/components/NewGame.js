@@ -17,7 +17,6 @@ export default class NewGame extends React.Component {
         this.setState({ pending: true });
 
         return api.getMatrix(this.state.x, this.state.y)
-            .then(res => res.json())
             .then(matrix => {
                 console.log('MATRIX', matrix);
                 return this.setState({ matrix });

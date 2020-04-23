@@ -70,12 +70,8 @@ export default class Translate extends React.Component {
         }
 
         this.setState({ pending: true });
-
-        console.log('search categories');
-        res = await api.translate(this.state.text);
-
         const tokens = this.state.text.split(/[ ,;:"-]/).map(e => e.toLowerCase());
-        return res.json()
+        return api.translate(this.state.text)
             .then(data => {
                 console.log('TRANSLATE RESULTS', data);
 

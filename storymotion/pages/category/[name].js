@@ -42,8 +42,7 @@ Category.getInitialProps = async function (context) {
   let emoji = [];
 
   try {
-    const res = await api.getEmojiByCategory(context.query.name);
-    emoji = await res.json();
+    emoji = await api.getEmojiByCategory(context.query.name);
   } catch (e) {
     console.error('Failed to get emoji', e);
   }
@@ -51,8 +50,7 @@ Category.getInitialProps = async function (context) {
   let related = [];
 
   try {
-    const relResponse = await api.getRelatedCategories(context.query.name);
-    related = await relResponse.json();
+    related = await api.getRelatedCategories(context.query.name);
   } catch (e) {
     console.error('Failed to get related categories', e);
   }

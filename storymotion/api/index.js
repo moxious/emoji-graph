@@ -16,7 +16,7 @@ const authorization = () => ({ Authorization: `Bearer ${credentials.idToken}` })
 
 const apiCall = (endpoint, options = null) => {
     console.log('API call', endpoint);
-    return fetch(endpoint, options);
+    return fetch(endpoint, options).then(res => res.json());
 };
 
 const translate = async (text) =>
@@ -24,7 +24,7 @@ const translate = async (text) =>
         method: 'POST',
         headers: json(),
         body: JSON.stringify({ text }),
-    });
+    }).then(res => res.json());
 
 const submitStory = async (data) =>
     fetch(endpoint + 'story', {
@@ -47,7 +47,7 @@ const user = async (user) =>
         method: 'POST',
         headers: _.merge(authorization(), json()),
         body: JSON.stringify({ user }),
-    });
+    }).then(res => res.json());
 
 const hello = () => {
     const token = localStorage.getItem('id_token');
@@ -58,7 +58,7 @@ const hello = () => {
     return apiCall(endpoint + 'hello', {
         method: 'POST',
         headers: _.merge(authorization(), json()),
-    });
+    }).then(res => res.json());
 };
 
 export default {

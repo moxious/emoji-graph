@@ -18,8 +18,7 @@ const Similar = ({ emoji, similar }) => {
 
 Similar.getInitialProps = async function (context) {
     const emoji = context.query.emoji;
-    const res = await api.getSimilarEmoji(emoji);
-    const data = await res.json();
+    const data = await api.getSimilarEmoji(emoji);
     console.log(data);
     return { emoji, similar: data };
 };
