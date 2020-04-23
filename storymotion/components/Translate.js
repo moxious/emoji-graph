@@ -51,12 +51,12 @@ export default class Translate extends React.Component {
     };
 
     onChange = _.debounce((event, data) => {
-        const val = (data.value && data.value.length > 1024) ? data.value.slice(0, 1023) : data.value;
+        const input = (data.value || '').trim();
+        const val = (input && input > 1024) ? input.slice(0, 1023) : input;
 
-        this.setState({ text: data.value });
+        this.setState({ text: val, results: null });
 
         if (this.state.text) {
-            console.log('translating....');
             return this.translate();
         }
     }, 200);
