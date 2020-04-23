@@ -1,6 +1,7 @@
 import fetch from 'isomorphic-unfetch';
+import auth0 from '../components/auth0';
 
-const endpoint = 'https://d9dzj96r0k.execute-api.us-east-1.amazonaws.com/basic/';
+const endpoint = auth0().API;
 const json = () => ({ 'Content-Type': 'application/json', });
 const authorization = () => ({ Authorization: `Bearer ${localStorage.getItem('id_token')}` });
 
