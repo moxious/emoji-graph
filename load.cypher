@@ -87,8 +87,8 @@ MATCH (e:Emoji) SET e.synonyms = '' RETURN count(e);
 LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/moxious/emoji-graph/master/synonyms.csv'
 AS line
 MATCH (e:Emoji { name: line.name })
-  SET e.syonyms = line.synonms
-RETURN count(e);
+  SET e.synonyms = toLower(line.synonyms)
+RETURN e.name, e.synonyms;
 
 /* Special case categories */
 WITH [
