@@ -58,7 +58,7 @@ const hello = () => {
     return apiCall(endpoint + 'hello', {
         method: 'POST',
         headers: _.merge(authorization(), json()),
-    }).then(res => res.json());
+    });
 };
 
 export default {

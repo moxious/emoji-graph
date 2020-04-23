@@ -11,9 +11,7 @@ const F = () => {
     if (api.hasCredentials()) {
         const { data, error } = useSWR('hello', async () => {
             console.log("hello");
-            const v = await api.private.hello();
-            console.log("v",v);
-            const json = await v.json();
+            const json = await api.private.hello();
             console.log("json",json);
             return json;
         });
