@@ -2,7 +2,7 @@
 CALL db.index.fulltext.createNodeIndex(
     "emojisAndNames",
     ["Emoji"],
-    ["name", "altName", "unicodeName", "emoji"]
+    ["name", "altName", "unicodeName", "emoji", "synonyms"]
 );
 
 CALL db.index.fulltext.createNodeIndex(

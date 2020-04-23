@@ -77,6 +77,9 @@ SET
   e.neutralRatio = neutralRatio
 RETURN count(e);
 
+/* Emoji synonyms */
+MATCH (e:Emoji) SET e.synonyms = '' RETURN count(e);
+
 /* Special case categories */
 WITH [
   'light skin tone',
