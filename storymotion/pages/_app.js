@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps }) {
         <Auth0Provider domain={config.AUTH0_DOMAIN}
             clientId={config.AUTH0_CLIENT_ID}
             // cacheLocation={'localstorage'}
-            redirectUri={config.AUTH0_CALLBACK_URL || 'http://localhost:3000/'}>
+            redirectUri={config.BASE_URL}>
             <Component {...pageProps} />
         </Auth0Provider>
     );

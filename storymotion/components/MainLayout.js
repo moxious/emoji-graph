@@ -12,7 +12,7 @@ const Authd = ({ lock, profile }) => {
     const auth = useAuth();
 
     const doLogin = () => {
-        return lock.show();
+        return lock.show({ redirectUrl: auth0().BASE_URL });
     };
 
     const doLogout = () => {
