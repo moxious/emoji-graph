@@ -6,7 +6,10 @@ import { useAuth } from 'use-auth0-hooks';
 import { Auth0Lock } from 'auth0-lock';
 import auth0 from '../components/auth0';
 import api from '../api';
+import moment from 'moment';
 let activeItem = 'home';
+
+const store = '_store';
 
 const Authd = ({ lock, profile }) => {
     const auth = useAuth();
@@ -17,10 +20,8 @@ const Authd = ({ lock, profile }) => {
 
     const doLogout = () => {
         lock.logout();
-        api.setCredentials({});
-        localStorage.removeItem('accessToken');
-        localStorage.removeItem('id_token');
-        localStorage.removeItem('profile');
+        api.credentials.set({});
+        localStorage.removeItem(store);
     };
 
     if (!profile) {
@@ -30,7 +31,7 @@ const Authd = ({ lock, profile }) => {
             </Menu.Item>
         )
     } else {
-        console.log('Logged in', profile);
+        // console.log('Logged in', profile);
         return (
             <Menu.Item name='logout' onClick={doLogout}>
                 {profile && profile.picture ? <img src={profile.picture} /> : profile.name}
@@ -50,6 +51,22 @@ class MainLayout extends React.Component {
         ],
         lock: null,
     };
+
+    componentWillUpdate() {
+        if (!api.credentials.areValid() && localStorage.getItem(store)) {
+            // Restore API credentials and profile if they're still valid.
+            const settings = JSON.parse(localStorage.getItem(store));
+            console.log('Found settings')
+            api.credentials.set(settings);
+
+            if (!api.credentials.areValid()) {
+                console.log('Clearing old invalid settings');
+                localStorage.removeItem(store);
+            } else {
+                this.setState({ profile: settings.profile });
+            }
+        }
+    }
 
     componentDidMount() {
         const lock = new Auth0Lock(auth0().AUTH0_CLIENT_ID, auth0().AUTH0_DOMAIN, {
@@ -79,21 +96,33 @@ class MainLayout extends React.Component {
             });
           });
 
-        lock.on('authenticated', (authResult) => {
-            console.log('Lock authenticated', authResult);
-            localStorage.setItem('accessToken', authResult.accessToken);
-            localStorage.setItem('id_token', authResult.idToken);
-            api.setCredentials(authResult);
+        lock.on('authenticated', (result) => {
+            localStorage.setItem('accessToken', result.accessToken);
+            localStorage.setItem('id_token', result.idToken);
+
+            const granted = moment.utc();
+            const expires = moment.utc().add(result.expiresIn, 'seconds');
+
+            _.set(result, 'granted', granted.toISOString());
+            _.set(result, 'expires', expires.toISOString());
+
+            api.credentials.set(result);
+            localStorage.setItem(store, result);
         
-            lock.getUserInfo(authResult.accessToken, (error, profile) => {
+            lock.getUserInfo(result.accessToken, (error, profile) => {
                 if (error) {
                     console.error('Error on getting lock user info', error);
                     return;
                 }
 
-                console.log('Lock user info', profile);
-                localStorage.setItem('profile', JSON.stringify(profile));
+                _.set(result, 'profile', profile);
+                api.credentials.set(result);
+                localStorage.setItem(store, JSON.stringify(result));
                 this.setState({ profile });
+
+                return api.private.user(profile)
+                    .then(result => console.log('user result', result))
+                    .catch(err => console.error('User error', err));
             });
         });
 
@@ -124,7 +153,7 @@ class MainLayout extends React.Component {
                             );
                         })
                     }
-                    <Authd lock={this.state.lock} profile={this.state.profile}/>
+                    <Authd lock={this.state.lock} profile={api.credentials.getProfile()}/>
                 </Menu>
 
                 <div className='MainContent'>{this.props.children}</div>

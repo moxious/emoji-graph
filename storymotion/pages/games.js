@@ -8,7 +8,7 @@ import api from '../api/';
 import useSWR from 'swr'
 
 const F = () => {
-    if (api.hasCredentials()) {
+    if (api.credentials.areValid()) {
         const { data, error } = useSWR('hello', async () => {
             console.log("hello");
             const json = await api.private.hello();

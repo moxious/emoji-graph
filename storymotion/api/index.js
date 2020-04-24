@@ -1,15 +1,10 @@
 import fetch from 'isomorphic-unfetch';
 import auth0 from '../components/auth0';
 import _ from 'lodash';
+import moment from 'moment';
 
 const endpoint = auth0().API;
 let credentials = {};
-
-const setCredentials = creds => {
-    credentials = creds;
-};
-
-const hasCredentials = () => !_.isNil(credentials.idToken);
 
 const json = () => ({ 'Content-Type': 'application/json', });
 const authorization = () => ({ Authorization: `Bearer ${credentials.idToken}` });
@@ -74,8 +69,27 @@ export default {
     apiCall,
     searchEmoji,
     searchCategories,
-    setCredentials,
-    hasCredentials,
+    credentials: {
+        get: () => _.cloneDeep(credentials),
+        set: creds => {
+            credentials = creds;
+        },
+        getProfile: () => _.get(_.cloneDeep(credentials), 'profile'),
+        arePresent: () => !_.isNil(credentials.idToken),
+        areValid: () => {
+            const expires = _.get(credentials, 'expires');
+            if (!expires) { return false; }
+            const m = moment.utc(expires);
+            const now = moment.utc();
+            
+            // We have a token, but it expired in the past.
+            if (now.diff(m) >= 0) {
+                return false;
+            }
+
+            return true;
+        },
+    },
     private: {
         hello,
         user,
