@@ -46,6 +46,7 @@ class MainLayout extends React.Component {
         items: [
             { name: 'home', link: "/", title: 'Home' },
             { name: 'search', link: "/search", title: 'Search' },
+            { name: 'story', link: '/story', title: 'Stories' },
             { name: 'games', link: "/games", title: 'Games' },
             { name: 'category', link: "/category", title: 'Categories' },
         ],

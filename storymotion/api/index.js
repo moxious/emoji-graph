@@ -29,6 +29,7 @@ const submitStory = async (data) =>
     });
 
 const getMatrix = async (x = 3, y = 3) => apiCall(endpoint + `matrix?x=${x}&y=${y}`);
+const getStories = async (skip = 0, limit = 50) => apiCall(endpoint + `story?skip=${skip}?limit=${limit}`);
 const getCategories = async (skip = 0, limit = 20) => apiCall(endpoint + `category?skip=${skip}&limit=${limit}`);
 const getEmojiByCategory = async (category) => apiCall(endpoint + `category/${category}`);
 const getRelatedCategories = async (category) => apiCall(endpoint + `category/related/${category}`);
@@ -62,6 +63,7 @@ export default {
     translate,
     getMatrix,
     getCategories,
+    getStories,
     getEmojiByCategory,
     getRelatedCategories,
     getSimilarEmoji,
