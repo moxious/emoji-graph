@@ -1,8 +1,16 @@
 import React from 'react';
 import api from '../api';
-import { Loader, Form, Header } from 'semantic-ui-react';
+import { Loader, Form, Header, Message, Icon } from 'semantic-ui-react';
 import EmojiCompact from '../components/EmojiCompact';
 import _ from 'lodash';
+
+const SimpleMessage = ({ message, positive }) =>
+    message ? <Message icon positive={positive}>
+        <Icon name='check' />
+        <Message.Content>
+            <Message.Header>{message}</Message.Header>
+        </Message.Content>
+    </Message> : '';
 
 export default class NewGame extends React.Component {
     state = {
@@ -11,10 +19,11 @@ export default class NewGame extends React.Component {
         x: 1,
         y: 3,
         storyLines: [],
+        message: null,
     };
 
     makeGame() {
-        this.setState({ pending: true });
+        this.setState({ pending: true, storyLines: [] });
 
         return api.getMatrix(this.state.x, this.state.y)
             .then(matrix => {
@@ -33,7 +42,7 @@ export default class NewGame extends React.Component {
 
     formComplete = () => {
         let complete = true;
-        for (let i=0; i<this.state.x; i++) {
+        for (let i = 0; i < this.state.x; i++) {
             if (!this.state.storyLines[i]) { complete = false; }
         }
 
@@ -47,11 +56,14 @@ export default class NewGame extends React.Component {
 
         const data = _.pick(this.state, ['storyLines', 'matrix', 'x', 'y']);
         console.log('SubmitStory', data);
+        // console.log(JSON.stringify(data,null,0));
 
         try {
             const result = await api.private.submitStory(data);
             const json = await result.json();
             console.log('Result of submitting story', json);
+            this.setState({ message: 'Thanks!  Let\'s play again!' });
+            return this.makeGame();
         } catch (e) {
             console.error('Error submitting story', e);
         }
@@ -83,6 +95,8 @@ export default class NewGame extends React.Component {
 
         return wrap(
             <div className='NewGame'>
+                <SimpleMessage message={this.state.message} positive={true}/>
+
                 <Form>
                     {
                         this.state.matrix.map((row, i) =>
@@ -100,7 +114,11 @@ export default class NewGame extends React.Component {
                                         placeholder='story' />
                                     <Form.Button type='submit' disabled={!this.formComplete()}
                                         onClick={this.submitStory}>
-                                            Submit
+                                        Submit
+                                    </Form.Button>
+                                    <Form.Button type='submit' disabled={this.state.pending}
+                                        onClick={() => this.makeGame()}>
+                                        Make another
                                     </Form.Button>
                                 </Form.Group>
                             </div>
