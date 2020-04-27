@@ -26,7 +26,21 @@ const submitStory = async (data) =>
         method: 'POST',
         headers: _.merge(json(), authorization()),
         body: JSON.stringify(data),
-    });
+    }).then(r => r.json());
+
+const vote = (entityType, entityId, direction='up') =>
+    fetch(endpoint + `vote/${entityType}/${entityId}/${direction}`, {
+        method: 'POST',
+        headers: _.merge(json(), authorization()),
+        body: {
+            entity: entityType,
+            entityId,
+            direction,
+        },
+    }).then(r => r.json());
+
+const upvote = (entityType, entityId) => vote(entityType, entityId, 'up');
+const downvote = (entityType, entityId) => vote(entityType, entityId, 'down');
 
 const getMatrix = async (x = 3, y = 3) => apiCall(endpoint + `matrix?x=${x}&y=${y}`);
 const getStories = async (skip = 0, limit = 50) => apiCall(endpoint + `story?skip=${skip}?limit=${limit}`);
@@ -96,5 +110,7 @@ export default {
         hello,
         user,
         submitStory,
+        upvote,
+        downvote,
     },
 };

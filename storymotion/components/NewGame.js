@@ -59,8 +59,7 @@ export default class NewGame extends React.Component {
         // console.log(JSON.stringify(data,null,0));
 
         try {
-            const result = await api.private.submitStory(data);
-            const json = await result.json();
+            const json = await api.private.submitStory(data);
             console.log('Result of submitting story', json);
             this.setState({ message: 'Thanks!  Let\'s play again!' });
             return this.makeGame();
