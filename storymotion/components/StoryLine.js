@@ -1,5 +1,6 @@
 import { Card } from 'semantic-ui-react';
 import EmojiCompact from './EmojiCompact';
+import _ from 'lodash';
 
 const emojiContainerStyle = {
     paddingTop: '20px',

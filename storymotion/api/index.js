@@ -9,7 +9,7 @@ let credentials = {};
 const json = () => ({ 'Content-Type': 'application/json', });
 const authorization = () => ({ Authorization: `Bearer ${credentials.idToken}` });
 
-const apiCall = (endpoint, options = null) => {
+const apiCall = (endpoint, options = {}) => {
     console.log('API call', endpoint);
     return fetch(endpoint, options).then(res => res.json());
 };
@@ -44,6 +44,9 @@ const downvote = (entityType, entityId) => vote(entityType, entityId, 'down');
 
 const getMatrix = async (x = 3, y = 3) => apiCall(endpoint + `matrix?x=${x}&y=${y}`);
 const getStories = async (skip = 0, limit = 50) => apiCall(endpoint + `story?skip=${skip}?limit=${limit}`);
+const getStoriesByEmoji = async(emoji, skip=0, limit=50) =>
+    apiCall(endpoint + `emoji/${emoji}/stories?skip=${skip}&limit=${limit}`);
+
 const getCategories = async (skip = 0, limit = 20) => apiCall(endpoint + `category?skip=${skip}&limit=${limit}`);
 const getEmojiByCategory = async (category) => apiCall(endpoint + `category/${category}`);
 const getRelatedCategories = async (category) => apiCall(endpoint + `category/related/${category}`);
@@ -78,6 +81,7 @@ export default {
     getMatrix,
     getCategories,
     getStories,
+    getStoriesByEmoji,
     getEmojiByCategory,
     getRelatedCategories,
     getSimilarEmoji,
@@ -85,6 +89,19 @@ export default {
     apiCall,
     searchEmoji,
     searchCategories,
+    stories: {
+        list: getStories,        
+    },
+    emoji: {
+        similar: getSimilarEmoji,
+        get: getEmoji,
+        search: searchEmoji,
+        getStories: getStoriesByEmoji,
+    },
+    categories: {
+        get: getCategories,
+        search: searchCategories,
+    },
     credentials: {
         get: () => _.cloneDeep(credentials),
         set: creds => {
