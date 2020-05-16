@@ -164,3 +164,26 @@ MERGE (c:Category { name: toLower(word) })
 MERGE (e)-[r:RELATED]->(c)
 RETURN count(c);
 */
+
+MATCH (e:Emoji) SET e.storyEligible = true RETURN count(e);
+
+/* Custom blacklisting */
+WITH [
+  'enclosed alphanumeric supplement', 'enclosed alphanumerics', 
+  'country-flag', 'block elements', 'tibetan', 'latin-1 supplement',
+  'dingbats', 'box drawing', 'geometric shapes', 'geometric', 
+  'miscellaneous symbols', 'enclosed ideographic supplement',
+  'braille patterns', 'yi radicals'
+] as blacklistCategories, [
+  'ID button', 'OK button', 'FREE button', 'NEW button',
+  'COOL button', 'SOS button', 'white heavy check mark',
+  'raised fist', 'exclamation mark', 'writing hand',
+  'sparkles'
+] as exceptions
+UNWIND blacklistCategories as blacklistCategory
+MATCH (c:Category { name: blacklistCategory })-[]-(e:Emoji)
+WHERE NOT e.name IN exceptions
+SET e.storyEligible = false
+RETURN count(e);
+
+

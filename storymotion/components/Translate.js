@@ -26,7 +26,6 @@ const TranslateResults = ({ data, tokens, text }) => {
 
     return (
         <Container className='TranslateResults'>
-            <h3>Input Text</h3>
             <p>{text}</p>
 
             <p style={{wordWrap: 'break-word'}}>
@@ -94,13 +93,13 @@ export default class Translate extends React.Component {
     render() {
         return (
             <div className='Translate'>
-                <h1>Translate English to Emoji</h1>
+                <h1>Translate!</h1>
 
                 <div className='TranslateForm'>
                     <Form>
                         <Form.Group inline={false}>
                             <Form.Field>
-                                <Form.Input style={{width: '200px'}}
+                                <Form.TextArea style={{width: '200px'}}
                                     maxLength={1000}
                                     onChange={this.onChange}
                                     placeholder='text' />

@@ -61,10 +61,11 @@ export default class NewGame extends React.Component {
         try {
             const json = await api.private.submitStory(data);
             console.log('Result of submitting story', json);
-            this.setState({ message: 'Thanks!  Let\'s play again!' });
+            this.setState({ error: null, message: 'Thanks!  Let\'s play again!' });
             return this.makeGame();
         } catch (e) {
             console.error('Error submitting story', e);
+            this.setState({ message: null, error:  'Oops!  Something went wrong!' });
         }
     };
 
@@ -77,7 +78,10 @@ export default class NewGame extends React.Component {
 
     render() {
         const wrap = children => <div className='Game'>
-            <Header size='huge'>Story Game</Header>
+            <Header size='huge'>Write your own story!</Header>
+
+            <p>What do you see?</p>
+
             {children}
         </div>;
 
@@ -94,7 +98,7 @@ export default class NewGame extends React.Component {
 
         return wrap(
             <div className='NewGame'>
-                <SimpleMessage message={this.state.message} positive={true}/>
+                <SimpleMessage message={this.state.message || this.state.error} positive={this.state.message ? true : false}/>
 
                 <Form>
                     {
@@ -107,17 +111,17 @@ export default class NewGame extends React.Component {
                                 }</p>
 
                                 <Form.Group style={cellStyle}>
-                                    <Form.Input
+                                    <Form.TextArea
                                         maxLength={1000}
                                         onChange={(e, d) => this.rowText(i, e, d)}
                                         placeholder='story' />
-                                    <Form.Button type='submit' disabled={!this.formComplete()}
+                                    <Form.Button positive type='submit' disabled={!this.formComplete()}
                                         onClick={this.submitStory}>
-                                        Submit
+                                        👍
                                     </Form.Button>
                                     <Form.Button type='submit' disabled={this.state.pending}
                                         onClick={() => this.makeGame()}>
-                                        Make another
+                                        ♻
                                     </Form.Button>
                                 </Form.Group>
                             </div>

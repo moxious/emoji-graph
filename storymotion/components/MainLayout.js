@@ -44,10 +44,9 @@ const Authd = ({ lock, profile }) => {
 class MainLayout extends React.Component {
     state = {
         items: [
-            { name: 'home', link: "/", title: 'Home' },
-            { name: 'search', link: "/search", title: 'Search' },
-            { name: 'story', link: '/story', title: 'Stories' },
-            { name: 'games', link: "/games", title: 'Games' },
+            { name: 'play', link: "/", title: '😂' },
+            { name: 'search', link: "/search", title: '🔎' },
+            { name: 'story', link: '/story', title: '📖' },
             { name: 'category', link: "/category", title: 'Categories' },
         ],
         lock: null,
