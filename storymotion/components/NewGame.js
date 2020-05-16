@@ -61,11 +61,11 @@ export default class NewGame extends React.Component {
         try {
             const json = await api.private.submitStory(data);
             console.log('Result of submitting story', json);
-            this.setState({ error: null, message: 'Thanks!  Let\'s play again!' });
+            this.setState({ error: null, message: 'Thanks! 👍 Let\'s play again!' });
             return this.makeGame();
         } catch (e) {
             console.error('Error submitting story', e);
-            this.setState({ message: null, error:  'Oops!  Something went wrong!' });
+            this.setState({ message: null, error:  'Oops! Something went wrong!' });
         }
     };
 

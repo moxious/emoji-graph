@@ -138,7 +138,7 @@ class MainLayout extends React.Component {
     render() {
         return (
             <div className='MainLayout'>
-                <Menu>
+                <Menu stackable>
                     {
                         this.state.items.map((i, idx) => {
                             return (
